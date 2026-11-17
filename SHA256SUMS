@@ -1,5 +1,5 @@
 45db4b3d73fc8dc92cd1e1c0d369b88e9f8bb21a2df68f981b8d5152b9ad67f5  ./.gitignore
-71e17a1b38db9161d56dcf527a5b457a85bf6551431f9d75106405cd75990877  ./README.md
+16bec50598f08046dc948203f9aa3725a6389442adb8a4a8bf1f57d5b4026b55  ./README.md
 467fde9cb4e129c0c974f63400e45e8747f3950a4a74fc1a37b5f8220aa9cfe4  ./baseline/assets/dex_evt/LICENSE
 0ae2a6085dfc31c79c4644e8319db93bb06a9362bc82e314354fcebe28b07b06  ./baseline/assets/dex_evt/meshes_convex/ankle_pitch_l_link.STL
 4485ad7465af7549be57c2345325ad8c487dfa97e591991c34bdf53333305ff7  ./baseline/assets/dex_evt/meshes_convex/ankle_pitch_r_link.STL
@@ -96,9 +96,14 @@ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./baseline/src
 b9a4cafcaf7a6f3c25f40f3d507488c2507c776eb5f9eead8c45c3e0bacc65e1  ./command.py
 633ff2a5413fede2f7016b358dbac6c6d6c917333fbde94b7e49adaabc1fe2b0  ./docs/ACCEPTANCE.md
 52b16328c7bceebed0073c448cdfaaed2cbb92e5234814b8e51a642b69932a37  ./docs/ARCHITECTURE.md
-1f7aaf4384538fdb50c6b06c1bfd8b68b75a70b5fe1fb539c15af16185c63ffa  ./docs/GITHUB_PACKAGE.md
+45c1dfcc042bb94044ebf5d39feffb23d7410c8629fddbf77e49f49762ceb0c3  ./docs/GITHUB_PACKAGE.md
 2aef8f501650e09fe38811e333ad4eefc6d5c8c2f9d5779c0e519daa7f6f5d76  ./docs/OPERATION.md
 b334cfe3413a8aa23327658083b781a8354fa76720dba78c5c25e61665c1355e  ./docs/RELEASE_NOTES.md
+5adcc9e6aab467df0a91202dd75a6a7f6755483f79e6d557b9c6781e361c61ec  ./docs/videos/IsaacSim-front_side-withbox.gif
+bf7d3e6a64d97c3c42267d11d6cbb52ce0ba60db30bd78a00be996f1d8473a8b  ./docs/videos/IsaacSim-front_side.gif
+576fc753e8c9437ba57447ce9b1e333aba3723aeed52852da8da724e8a8606d9  ./docs/videos/Mujoco-front_side-speed(0-1.2).gif
+7c809b3495f85da41ae64315010fc65fd5aa2734b85a42d0d53411ec1981256e  ./docs/videos/Mujoco-front_side-withbox.gif
+cfb435527902c9bc62dd849fc765ac4a9bd4e675d2ad077eb390d203fdf80d69  ./docs/videos/Mujoco-front_side.gif
 aed8a32609600f2b7fa03aee08dd0762619ebe29d7cf7dbc28bd3c1800971b9a  ./env.sh
 ed0c9aa52340894aa78f440d54132db858551bea1f4cad8d277890ca2c8ad634  ./examples/empty/metrics.json
 b9a9f413025b251f9de08d37a893ee9dc008a96eafafdf63bdd983eae3121e62  ./examples/empty/run.json

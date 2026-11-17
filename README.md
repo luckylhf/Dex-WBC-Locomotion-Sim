@@ -7,6 +7,18 @@
 
 本包提供 MuJoCo 的空手、抱空箱、新增 1 kg、新增 10 kg 四种模型工况，以及 Isaac Sim 的空手与新增 10 kg 两种工况。控制频率 50 Hz。交付环境为 Linux x86_64 和 Python 3.11。
 
+## 仿真演示
+
+以下 GIF 由 `videos/` 中的原始 MP4 转出，统一为 480 px 宽、8 fps 的循环动画；原始 MP4 不随 Git 分发。点击图片可打开对应 GIF。
+
+| 工况 | 演示 |
+| --- | --- |
+| MuJoCo 空手，75 s | [![MuJoCo 空手](docs/videos/Mujoco-front_side.gif)](docs/videos/Mujoco-front_side.gif) |
+| MuJoCo 新增 10 kg 多方向，202 s | [![MuJoCo 抱箱](docs/videos/Mujoco-front_side-withbox.gif)](docs/videos/Mujoco-front_side-withbox.gif) |
+| MuJoCo 速度 0–1.2 m/s 档，124 s | [![MuJoCo 速度档](<docs/videos/Mujoco-front_side-speed(0-1.2).gif>)](<docs/videos/Mujoco-front_side-speed(0-1.2).gif>) |
+| Isaac Sim 空手，75 s | [![Isaac Sim 空手](docs/videos/IsaacSim-front_side.gif)](docs/videos/IsaacSim-front_side.gif) |
+| Isaac Sim 新增 10 kg 抱箱，202 s | [![Isaac Sim 抱箱](docs/videos/IsaacSim-front_side-withbox.gif)](docs/videos/IsaacSim-front_side-withbox.gif) |
+
 ## 克隆后离线安装
 
 在联网机器上克隆本仓库，再把完整项目目录复制到离线机器。源码、共享网格、ONNX 和离线 wheels 包都随 Git 检出。离线机器需有 Linux x86_64、Python 3.11（含 venv）、zstd、tar 和 sha256sum。
