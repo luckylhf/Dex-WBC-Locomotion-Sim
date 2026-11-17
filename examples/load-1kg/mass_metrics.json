@@ -1,0 +1,313 @@
+{
+  "physics_true_mass_kg": 1.65,
+  "physics_true_added_kg": 1.0,
+  "expected_added_bin": 1,
+  "windows": {
+    "initial_stand": {
+      "mean_estimated_kg": 1.64925284278017,
+      "mean_estimated_added_kg": 0.99925284278017,
+      "added_mean_abs_error_kg": 0.0007471572198298962,
+      "max_sample_error_kg": 0.004458470210354948,
+      "mean_abs_error_kg": 0.0007471572198297852,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 1.0,
+      "mean_vertical_wrist_load_n": [
+        8.084760539436592,
+        8.099201033336719
+      ],
+      "min_physics_vertical_support_n": [
+        8.08325924378043,
+        8.094168547684898
+      ],
+      "mean_physics_vertical_support_n": [
+        8.085279826330302,
+        8.099686466122542
+      ],
+      "mean_box_z_above_pelvis_m": 0.19178758912012647,
+      "box_roll_pitch_span_deg": [
+        0.011365320131800916,
+        0.13096220296055172
+      ],
+      "box_roll_pitch_rms_deg": [
+        1.8267355871255762,
+        2.7817326178669286
+      ],
+      "rms_grip_offset_mm": 2.6899410967590383,
+      "peak_grip_offset_mm": 2.6924496670459415
+    },
+    "1_walk": {
+      "mean_estimated_kg": 1.6496680274102529,
+      "mean_estimated_added_kg": 0.9996680274102531,
+      "added_mean_abs_error_kg": 0.0035982765041133254,
+      "max_sample_error_kg": 0.01782904723292278,
+      "mean_abs_error_kg": 0.0035982765041132725,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.5929203539823009,
+      "mean_vertical_wrist_load_n": [
+        8.014260709616005,
+        8.234269332023993
+      ],
+      "min_physics_vertical_support_n": [
+        4.232959552135564,
+        4.700667307381641
+      ],
+      "mean_physics_vertical_support_n": [
+        8.00474244711565,
+        8.221752525986352
+      ],
+      "mean_box_z_above_pelvis_m": 0.20071999416052644,
+      "box_roll_pitch_span_deg": [
+        2.1533232301950163,
+        5.385544653599517
+      ],
+      "box_roll_pitch_rms_deg": [
+        1.3136426863142412,
+        2.5724204918637272
+      ],
+      "rms_grip_offset_mm": 2.7807278191073728,
+      "peak_grip_offset_mm": 3.362908920860519
+    },
+    "1_park": {
+      "mean_estimated_kg": 1.6453906503227809,
+      "mean_estimated_added_kg": 0.9953906503227811,
+      "added_mean_abs_error_kg": 0.004806650690182548,
+      "max_sample_error_kg": 0.024018261028473153,
+      "mean_abs_error_kg": 0.00480665069018251,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.7878787878787878,
+      "mean_vertical_wrist_load_n": [
+        8.087741338896144,
+        8.0853737720543
+      ],
+      "min_physics_vertical_support_n": [
+        8.086713130332319,
+        8.034716928001563
+      ],
+      "mean_physics_vertical_support_n": [
+        8.090760580991345,
+        8.087579141232055
+      ],
+      "mean_box_z_above_pelvis_m": 0.18582030614550135,
+      "box_roll_pitch_span_deg": [
+        0.07536496617204125,
+        0.13844582720256193
+      ],
+      "box_roll_pitch_rms_deg": [
+        1.696286322894862,
+        3.4279306606839084
+      ],
+      "rms_grip_offset_mm": 2.687465099484375,
+      "peak_grip_offset_mm": 2.6958486603514906
+    },
+    "2_walk": {
+      "mean_estimated_kg": 1.6483887086380937,
+      "mean_estimated_added_kg": 0.9983887086380943,
+      "added_mean_abs_error_kg": 0.0022795744701174705,
+      "max_sample_error_kg": 0.013326182819133559,
+      "mean_abs_error_kg": 0.002279574470117396,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.415929203539823,
+      "mean_vertical_wrist_load_n": [
+        8.030837024581741,
+        8.285046948865821
+      ],
+      "min_physics_vertical_support_n": [
+        3.7194304033753145,
+        4.043172961823328
+      ],
+      "mean_physics_vertical_support_n": [
+        8.00179650423121,
+        8.26573460530979
+      ],
+      "mean_box_z_above_pelvis_m": 0.21037980686788957,
+      "box_roll_pitch_span_deg": [
+        1.4244612768254672,
+        6.89299777117321
+      ],
+      "box_roll_pitch_rms_deg": [
+        0.5760303650630716,
+        2.300066089954908
+      ],
+      "rms_grip_offset_mm": 2.804366711894596,
+      "peak_grip_offset_mm": 3.4840260860331824
+    },
+    "2_park": {
+      "mean_estimated_kg": 1.6466695051343159,
+      "mean_estimated_added_kg": 0.9966695051343158,
+      "added_mean_abs_error_kg": 0.00343383204588385,
+      "max_sample_error_kg": 0.02800010748984838,
+      "mean_abs_error_kg": 0.0034338320458837833,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.7920792079207921,
+      "mean_vertical_wrist_load_n": [
+        8.080618929203961,
+        8.097883595225031
+      ],
+      "min_physics_vertical_support_n": [
+        8.071816821138176,
+        8.052727741720496
+      ],
+      "mean_physics_vertical_support_n": [
+        8.082886642689651,
+        8.098783282994752
+      ],
+      "mean_box_z_above_pelvis_m": 0.19490553711711606,
+      "box_roll_pitch_span_deg": [
+        0.15767260045783482,
+        0.14083159164284664
+      ],
+      "box_roll_pitch_rms_deg": [
+        3.193830117551329,
+        2.4233798546163463
+      ],
+      "rms_grip_offset_mm": 2.68907747881962,
+      "peak_grip_offset_mm": 2.698332324109061
+    },
+    "3_walk": {
+      "mean_estimated_kg": 1.6501198455383423,
+      "mean_estimated_added_kg": 1.0001198455383422,
+      "added_mean_abs_error_kg": 0.0025873105272060425,
+      "max_sample_error_kg": 0.022445941642395884,
+      "mean_abs_error_kg": 0.0025873105272060395,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.4424778761061947,
+      "mean_vertical_wrist_load_n": [
+        7.928704505335855,
+        8.366225174065509
+      ],
+      "min_physics_vertical_support_n": [
+        3.4115926807221344,
+        4.126896645761982
+      ],
+      "mean_physics_vertical_support_n": [
+        7.913773960662068,
+        8.338865019826306
+      ],
+      "mean_box_z_above_pelvis_m": 0.21680857733802952,
+      "box_roll_pitch_span_deg": [
+        1.6618737296398471,
+        6.047206908973928
+      ],
+      "box_roll_pitch_rms_deg": [
+        0.36166628888878316,
+        2.0339804077171975
+      ],
+      "rms_grip_offset_mm": 2.822849023852966,
+      "peak_grip_offset_mm": 3.5262902837628434
+    },
+    "3_park": {
+      "mean_estimated_kg": 1.646566501331246,
+      "mean_estimated_added_kg": 0.9965665013312465,
+      "added_mean_abs_error_kg": 0.003546743690089909,
+      "max_sample_error_kg": 0.02803012441445496,
+      "mean_abs_error_kg": 0.0035467436900898258,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.7835051546391752,
+      "mean_vertical_wrist_load_n": [
+        8.079352522808508,
+        8.08920184381625
+      ],
+      "min_physics_vertical_support_n": [
+        8.057224639739287,
+        8.01694419471461
+      ],
+      "mean_physics_vertical_support_n": [
+        8.083290467364272,
+        8.092294947366737
+      ],
+      "mean_box_z_above_pelvis_m": 0.19584575036559387,
+      "box_roll_pitch_span_deg": [
+        0.08079463263718933,
+        0.2711310341873072
+      ],
+      "box_roll_pitch_rms_deg": [
+        2.928863251359621,
+        2.32469141228659
+      ],
+      "rms_grip_offset_mm": 2.688988848914842,
+      "peak_grip_offset_mm": 2.715046016749365
+    },
+    "4_walk": {
+      "mean_estimated_kg": 1.6500468931484646,
+      "mean_estimated_added_kg": 1.0000468931484645,
+      "added_mean_abs_error_kg": 0.004062409595270667,
+      "max_sample_error_kg": 0.014492765978513233,
+      "mean_abs_error_kg": 0.004062409595270651,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.8008849557522124,
+      "mean_vertical_wrist_load_n": [
+        7.954643451983258,
+        8.327548032058798
+      ],
+      "min_physics_vertical_support_n": [
+        3.969028172251589,
+        3.2001657287953416
+      ],
+      "mean_physics_vertical_support_n": [
+        7.931606969475093,
+        8.304784265374813
+      ],
+      "mean_box_z_above_pelvis_m": 0.21191338167118093,
+      "box_roll_pitch_span_deg": [
+        2.657423657187737,
+        5.980480854421486
+      ],
+      "box_roll_pitch_rms_deg": [
+        0.6707831014114923,
+        1.6594224582122832
+      ],
+      "rms_grip_offset_mm": 2.806443075843375,
+      "peak_grip_offset_mm": 3.5417217843216826
+    },
+    "4_park": {
+      "mean_estimated_kg": 1.6457550789430957,
+      "mean_estimated_added_kg": 0.9957550789430959,
+      "added_mean_abs_error_kg": 0.004382763217825845,
+      "max_sample_error_kg": 0.0267161618931393,
+      "mean_abs_error_kg": 0.00438276321782576,
+      "correct_bin_fraction": 1.0,
+      "valid_fraction": 0.7878787878787878,
+      "mean_vertical_wrist_load_n": [
+        8.083579837002228,
+        8.08603292158547
+      ],
+      "min_physics_vertical_support_n": [
+        8.050318207103329,
+        8.006660066797414
+      ],
+      "mean_physics_vertical_support_n": [
+        8.087729021067995,
+        8.088636000251075
+      ],
+      "mean_box_z_above_pelvis_m": 0.1973018394558809,
+      "box_roll_pitch_span_deg": [
+        0.148901040867766,
+        0.4528774383371288
+      ],
+      "box_roll_pitch_rms_deg": [
+        2.6315085433666345,
+        2.1718500067655513
+      ],
+      "rms_grip_offset_mm": 2.6890327441083817,
+      "peak_grip_offset_mm": 2.7350411065717544
+    }
+  },
+  "nonpositive_support_counts": [
+    0,
+    0
+  ],
+  "both_grips_active": true,
+  "transient_frames": 548,
+  "valid_estimate_in_transient_frames": 0,
+  "peak_applied_payload_delta_deg": 1.190471438852364,
+  "completed": true,
+  "physics_resets": 0,
+  "physics_steps": 10800,
+  "box_contact_steps": 0,
+  "foot_rub_steps": 0,
+  "peak_box_roll_pitch_deg": [
+    3.2105139195205235,
+    7.364881654468529
+  ],
+  "max_grip_gap_mm": 3.5417217843216826
+}

@@ -1,0 +1,14 @@
+absl-py==2.5.1
+etils==1.15.0
+flatbuffers==25.12.19
+fsspec==2026.9.0
+glfw==2.11.0
+mujoco==3.11.0
+numpy==2.4.6
+onnxruntime==1.31.1
+packaging==26.3
+pillow==13.0.0
+protobuf==7.36.2
+pyopengl==3.1.10
+typing-extensions==4.16.0
+zipp==4.1.2

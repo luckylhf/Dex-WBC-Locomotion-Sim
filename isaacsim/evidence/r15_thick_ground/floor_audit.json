@@ -1,0 +1,20 @@
+{
+  "through_15_seconds": {
+    "minimum_z_m": -0.0024964055483582027,
+    "time_s": 6.7,
+    "foot": "L",
+    "contact_load_bw": 0.7744044138553868,
+    "frames_under_ground_by_5mm": 0,
+    "unloaded_foot_samples_under_ground_by_10mm": 0,
+    "nonsupport_ground_substeps": 0
+  },
+  "entire_record": {
+    "minimum_z_m": -0.00366857678681661,
+    "time_s": 58.38,
+    "foot": "R",
+    "contact_load_bw": 0.34871113781558666,
+    "frames_under_ground_by_5mm": 0,
+    "unloaded_foot_samples_under_ground_by_10mm": 0,
+    "nonsupport_ground_substeps": 0
+  }
+}

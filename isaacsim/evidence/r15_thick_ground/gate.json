@@ -1,0 +1,154 @@
+{
+  "passed": false,
+  "contact_passed": true,
+  "stand": {
+    "passed": true,
+    "drift_m": 0.0074269244710430315,
+    "peak_chest_deg": 1.802760695025156,
+    "minimum_foot_load_bw": 0.38525445472531866
+  },
+  "limits": {
+    "speed_mps": 0.025,
+    "yaw_radps": 0.035,
+    "cadence_hz": [
+      1.9,
+      2.1
+    ],
+    "park_xy_m": 0.025,
+    "park_yaw_deg": 0.5,
+    "park_ankle_gap_m": 0.025,
+    "parking_min_foot_load_bw": 0.1
+  },
+  "trials": [
+    {
+      "label": "Forward",
+      "primary_command": 0.4,
+      "primary_actual": 0.3936827858937705,
+      "cadence_hz": 1.9999999999999996,
+      "park": {
+        "window_start_s": 13.040000000000001,
+        "window_end_s": 15.0,
+        "xy_net_drift_m": 0.010187139497809465,
+        "mean_speed_mps": 0.00806682645300821,
+        "yaw_drift_deg": 0.03972663220575273,
+        "final_ankle_gap_m": 0.005131867172935781,
+        "final_load_bw": [
+          0.4705764594459022,
+          0.5288222280754643
+        ],
+        "gather_foot": "R"
+      },
+      "max_swing_inward_m": 0.011549566367289238,
+      "failures": []
+    },
+    {
+      "label": "Backward",
+      "primary_command": -0.3,
+      "primary_actual": -0.2724059863470043,
+      "cadence_hz": 1.9801980198019806,
+      "park": {
+        "window_start_s": 25.04,
+        "window_end_s": 27.0,
+        "xy_net_drift_m": 0.013894447019689086,
+        "mean_speed_mps": 0.009447558204213986,
+        "yaw_drift_deg": 0.12862533735391043,
+        "final_ankle_gap_m": 0.010451581037203901,
+        "final_load_bw": [
+          0.4844420084357335,
+          0.49449165540972606
+        ],
+        "gather_foot": "R"
+      },
+      "max_swing_inward_m": 0.02631809481625003,
+      "failures": [
+        "Primary speed"
+      ]
+    },
+    {
+      "label": "Left",
+      "primary_command": 0.3,
+      "primary_actual": 0.2822023486274028,
+      "cadence_hz": 2.0,
+      "park": {
+        "window_start_s": 37.0,
+        "window_end_s": 39.0,
+        "xy_net_drift_m": 0.004797542670070896,
+        "mean_speed_mps": 0.004084927179161379,
+        "yaw_drift_deg": -0.06446993172324923,
+        "final_ankle_gap_m": 0.026733973094970147,
+        "final_load_bw": [
+          0.4581404763083666,
+          0.5388230224642643
+        ],
+        "gather_foot": "R"
+      },
+      "max_swing_inward_m": 0.0008333749222829994,
+      "failures": [
+        "Final ankle alignment"
+      ]
+    },
+    {
+      "label": "Right",
+      "primary_command": -0.3,
+      "primary_actual": -0.2951052643487555,
+      "cadence_hz": 2.010050251256283,
+      "park": {
+        "window_start_s": 49.0,
+        "window_end_s": 51.0,
+        "xy_net_drift_m": 0.016379595236762395,
+        "mean_speed_mps": 0.009754243010535027,
+        "yaw_drift_deg": 0.353249005374915,
+        "final_ankle_gap_m": 0.005443650748626583,
+        "final_load_bw": [
+          0.4526214081152248,
+          0.5326494570229038
+        ],
+        "gather_foot": "L"
+      },
+      "max_swing_inward_m": 0.0015509797956240491,
+      "failures": []
+    },
+    {
+      "label": "Turn left",
+      "primary_command": 0.45,
+      "primary_actual": 0.45369821392385745,
+      "cadence_hz": 2.0,
+      "park": {
+        "window_start_s": 61.0,
+        "window_end_s": 63.0,
+        "xy_net_drift_m": 0.013936248644957275,
+        "mean_speed_mps": 0.010564031608189516,
+        "yaw_drift_deg": 0.21637068817161326,
+        "final_ankle_gap_m": 0.007958715343740576,
+        "final_load_bw": [
+          0.4293975888549947,
+          0.5294281219863741
+        ],
+        "gather_foot": "R"
+      },
+      "max_swing_inward_m": 0.014461088517488533,
+      "failures": []
+    },
+    {
+      "label": "Turn right",
+      "primary_command": -0.45,
+      "primary_actual": -0.45155677037708386,
+      "cadence_hz": 2.0,
+      "park": {
+        "window_start_s": 73.0,
+        "window_end_s": 75.0,
+        "xy_net_drift_m": 0.008591885117082901,
+        "mean_speed_mps": 0.0058340067462099325,
+        "yaw_drift_deg": -0.035105469709993314,
+        "final_ankle_gap_m": 0.01018504434161982,
+        "final_load_bw": [
+          0.47974433202741246,
+          0.49744972006131455
+        ],
+        "gather_foot": "L"
+      },
+      "max_swing_inward_m": 0.013295717969044643,
+      "failures": []
+    }
+  ]
+}

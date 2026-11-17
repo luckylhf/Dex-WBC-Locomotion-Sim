@@ -1,0 +1,186 @@
+{
+  "completed": true,
+  "frames": 3001,
+  "physics_steps": 12000,
+  "physics_resets": 0,
+  "duration_s": 60.00000000001224,
+  "go_s": null,
+  "zero_s": null,
+  "empty_box_enclosure_dimensions_m": [
+    0.29,
+    0.35,
+    0.19
+  ],
+  "empty_box_wall_thickness_m": 0.014,
+  "model_box_mass_kg": 10.65,
+  "empty_shell_mass_kg": 0.65,
+  "added_mass_kg": 10.0,
+  "added_mass_locations_m": [
+    [
+      -0.157,
+      0.182,
+      -0.065
+    ],
+    [
+      -0.157,
+      -0.182,
+      -0.065
+    ]
+  ],
+  "added_mass_per_grip_kg": 5.0,
+  "estimator_empty_tare_kg": 0.65,
+  "box_local_com_m": [
+    -0.14741784037558686,
+    0.0,
+    -0.06266474297299493
+  ],
+  "distal_masses_kg": [
+    0.546466,
+    0.546466
+  ],
+  "policy_sha256": "0a0d3b3ba10922ef6c05fe36a1ce51a70d46c2546ff0d0c635008777d8813b98",
+  "model_sha256": "14b42c22ae6611101f714bf02fbf110fb3a962d74dad0cebd9de67c6ebf1ec7d",
+  "box_free_qadr": 36,
+  "body_ground_steps": 0,
+  "box_contact_steps": 0,
+  "box_ground_steps": 0,
+  "foot_rub_steps": 0,
+  "grip_over_20mm_frames": 0,
+  "options": {
+    "mass": 0.65,
+    "seed": 0,
+    "reach": 0.29,
+    "hand_height": -0.02,
+    "grip_softness": 0.04,
+    "gravity_gain": 1.0,
+    "payload_gain": 1.0,
+    "cop_shift": 0.0,
+    "stride_scale": 1.42,
+    "heading_trim": -0.31,
+    "stand_only": true,
+    "stand_seconds": 60.0,
+    "added_mass": 10.0,
+    "transfer_start": 5.0,
+    "transfer_ramp": 0.24,
+    "lean_gain": 0.2,
+    "com_gain": 1.0,
+    "force_tau": 0.2,
+    "arm_damping_scale": 5.0,
+    "waist_damping_scale": 7.0,
+    "reference_control": false
+  },
+  "planned_blocks": [
+    {
+      "kind": "stand",
+      "start_s": 0.0,
+      "end_s": 5.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 5.0,
+      "end_s": 9.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 9.0,
+      "end_s": 13.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 13.0,
+      "end_s": 17.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 17.0,
+      "end_s": 21.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 21.0,
+      "end_s": 25.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 25.0,
+      "end_s": 29.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 29.0,
+      "end_s": 33.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 33.0,
+      "end_s": 37.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 37.0,
+      "end_s": 41.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 41.0,
+      "end_s": 45.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 45.0,
+      "end_s": 49.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 49.0,
+      "end_s": 53.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 53.0,
+      "end_s": 57.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 57.0,
+      "end_s": 61.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 61.0,
+      "end_s": 65.0,
+      "side": "L"
+    }
+  ],
+  "balance_fields": [
+    "raw_forward_torque_nm",
+    "filtered_forward_torque_nm",
+    "target_chest_pitch_deg",
+    "actual_chest_pitch_deg",
+    "waist_target_rad",
+    "wrench_valid",
+    "reference_com_shift_m",
+    "filtered_support_force_n"
+  ],
+  "load_transfer": {
+    "start_s": 5.0,
+    "fully_transferred_s": 5.24,
+    "initial_upward_force_per_grip_n": 49.050000000000004,
+    "method": "Smooth withdrawal of separate vertical support at both added-mass centres"
+  }
+}

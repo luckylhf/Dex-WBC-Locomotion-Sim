@@ -1,0 +1,102 @@
+{
+  "python": "3.11.15",
+  "platform": "Ubuntu 22.04 x86_64",
+  "dependencies": {
+    "mujoco": "3.11.0",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.4.6",
+    "Pillow": "13.0.0"
+  },
+  "install": "Isolated virtual environment, pip --no-index from packaged wheels",
+  "overwrite_rejected": true,
+  "results": {
+    "live": {
+      "completed": true,
+      "physics_resets": 0,
+      "trials": 0,
+      "passed": true,
+      "duration_s": 46.00000000000508,
+      "rub_substeps": 0,
+      "crossing_frames": 0,
+      "speed_segments": 6,
+      "stop_count": 1,
+      "cadence_hz": 2.0011273957158964
+    },
+    "empty": {
+      "completed": true,
+      "physics_resets": 0,
+      "trials": 19,
+      "passed": true,
+      "duration_s": 233.99999999985968,
+      "array_equality": {
+        "qpos": true,
+        "physics_time": true,
+        "actuator_targets": true,
+        "wrist_compensated_world": true
+      }
+    },
+    "load-1kg": {
+      "completed": true,
+      "physics_resets": 0,
+      "trials": 4,
+      "passed": true,
+      "duration_s": 54.00000000000917,
+      "array_equality": {
+        "qpos": true,
+        "physics_time": true,
+        "actuator_targets": true,
+        "wrist_compensated_world": true
+      }
+    },
+    "load-10kg-stand": {
+      "completed": true,
+      "physics_resets": 0,
+      "trials": 0,
+      "passed": true,
+      "duration_s": 60.00000000001224,
+      "array_equality": {
+        "qpos": true,
+        "physics_time": true,
+        "actuator_targets": true,
+        "wrist_compensated_world": true,
+        "balance_trace": true
+      }
+    },
+    "load-10kg-forward": {
+      "completed": true,
+      "physics_resets": 0,
+      "trials": 4,
+      "passed": true,
+      "duration_s": 58.00000000001122,
+      "array_equality": {
+        "qpos": true,
+        "physics_time": true,
+        "actuator_targets": true,
+        "wrist_compensated_world": true,
+        "balance_trace": true
+      }
+    },
+    "load-10kg-omni": {
+      "completed": true,
+      "physics_resets": 0,
+      "trials": 16,
+      "passed": true,
+      "duration_s": 201.9999999998888,
+      "array_equality": {
+        "qpos": true,
+        "physics_time": true,
+        "actuator_targets": true,
+        "wrist_compensated_world": true,
+        "balance_trace": true
+      }
+    }
+  },
+  "video": {
+    "route": "live",
+    "renderer": "EGL + FFmpeg",
+    "decoded": true,
+    "width": 1200,
+    "height": 574,
+    "duration_s": 46.04
+  }
+}

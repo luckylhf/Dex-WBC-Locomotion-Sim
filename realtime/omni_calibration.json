@@ -1,0 +1,11 @@
+{
+  "back_stride": 1.49,
+  "back_heading": 0.042,
+  "back_gather_r": -0.065,
+  "side_stride": 1.22,
+  "side_stride_right": 1.36,
+  "side_tuck": 0.081,
+  "side_forward": -0.102,
+  "yaw_center_x": -0.116,
+  "yaw_center_y": -0.015
+}

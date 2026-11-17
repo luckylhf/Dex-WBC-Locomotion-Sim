@@ -1,0 +1,890 @@
+{
+  "completed": true,
+  "frames": 2701,
+  "physics_steps": 10800,
+  "physics_resets": 0,
+  "duration_s": 54.00000000000917,
+  "go_s": null,
+  "zero_s": null,
+  "empty_box_enclosure_dimensions_m": [
+    0.29,
+    0.35,
+    0.19
+  ],
+  "empty_box_wall_thickness_m": 0.014,
+  "model_box_mass_kg": 1.65,
+  "empty_shell_mass_kg": 0.65,
+  "added_mass_kg": 1.0,
+  "added_mass_locations_m": [
+    [
+      -0.157,
+      0.182,
+      -0.065
+    ],
+    [
+      -0.157,
+      -0.182,
+      -0.065
+    ]
+  ],
+  "added_mass_per_grip_kg": 0.5,
+  "estimator_empty_tare_kg": 0.65,
+  "box_local_com_m": [
+    -0.09515151515151515,
+    0.0,
+    -0.04992697737114909
+  ],
+  "distal_masses_kg": [
+    0.546466,
+    0.546466
+  ],
+  "policy_sha256": "0a0d3b3ba10922ef6c05fe36a1ce51a70d46c2546ff0d0c635008777d8813b98",
+  "model_sha256": "0c5205e5fcd7ea9575d8b87dfa83309c00caf6436eb8b3db8c3c2666dc4532a6",
+  "box_free_qadr": 36,
+  "body_ground_steps": 0,
+  "box_contact_steps": 0,
+  "box_ground_steps": 0,
+  "foot_rub_steps": 0,
+  "grip_over_20mm_frames": 0,
+  "options": {
+    "mass": 0.65,
+    "seed": 0,
+    "reach": 0.37,
+    "hand_height": -0.02,
+    "grip_softness": 0.075,
+    "gravity_gain": 1.0,
+    "payload_gain": 1.0,
+    "cop_shift": 0.0,
+    "stride_scale": 1.42,
+    "heading_trim": -0.31,
+    "stand_only": false,
+    "stand_seconds": 60.0,
+    "added_mass": 1.0,
+    "profile": "realtime/carry_omni_calibration.json"
+  },
+  "planned_blocks": [
+    {
+      "kind": "stand",
+      "start_s": 0.0,
+      "end_s": 5.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 5.0,
+      "end_s": 6.24,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 6.24,
+      "end_s": 7.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 7.0,
+      "end_s": 7.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 7.5,
+      "end_s": 8.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 8.0,
+      "end_s": 8.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 8.5,
+      "end_s": 9.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 9.0,
+      "end_s": 9.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 9.5,
+      "end_s": 10.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 10.0,
+      "end_s": 10.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 10.5,
+      "end_s": 11.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 11.0,
+      "end_s": 11.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 11.5,
+      "end_s": 12.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 12.0,
+      "end_s": 12.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 12.5,
+      "end_s": 13.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 13.0,
+      "end_s": 13.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 13.5,
+      "end_s": 14.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 14.0,
+      "end_s": 14.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 14.5,
+      "end_s": 15.48,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 15.48,
+      "end_s": 18.240000000000002,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 18.240000000000002,
+      "end_s": 19.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 19.0,
+      "end_s": 19.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 19.5,
+      "end_s": 20.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 20.0,
+      "end_s": 20.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 20.5,
+      "end_s": 21.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 21.0,
+      "end_s": 21.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 21.5,
+      "end_s": 22.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 22.0,
+      "end_s": 22.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 22.5,
+      "end_s": 23.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 23.0,
+      "end_s": 23.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 23.5,
+      "end_s": 24.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 24.0,
+      "end_s": 24.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 24.5,
+      "end_s": 25.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 25.0,
+      "end_s": 25.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 25.5,
+      "end_s": 26.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 26.0,
+      "end_s": 26.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 26.5,
+      "end_s": 27.44,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 27.44,
+      "end_s": 30.240000000000002,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 30.240000000000002,
+      "end_s": 31.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 31.0,
+      "end_s": 31.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 31.5,
+      "end_s": 32.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 32.0,
+      "end_s": 32.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 32.5,
+      "end_s": 33.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 33.0,
+      "end_s": 33.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 33.5,
+      "end_s": 34.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 34.0,
+      "end_s": 34.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 34.5,
+      "end_s": 35.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 35.0,
+      "end_s": 35.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 35.5,
+      "end_s": 36.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 36.0,
+      "end_s": 36.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 36.5,
+      "end_s": 37.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 37.0,
+      "end_s": 37.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 37.5,
+      "end_s": 38.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 38.0,
+      "end_s": 38.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 38.5,
+      "end_s": 39.52,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 39.52,
+      "end_s": 42.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 42.24,
+      "end_s": 43.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 43.0,
+      "end_s": 43.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 43.5,
+      "end_s": 44.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 44.0,
+      "end_s": 44.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 44.5,
+      "end_s": 45.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 45.0,
+      "end_s": 45.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 45.5,
+      "end_s": 46.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 46.0,
+      "end_s": 46.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 46.5,
+      "end_s": 47.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 47.0,
+      "end_s": 47.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 47.5,
+      "end_s": 48.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 48.0,
+      "end_s": 48.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 48.5,
+      "end_s": 49.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 49.0,
+      "end_s": 49.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 49.5,
+      "end_s": 50.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 50.0,
+      "end_s": 50.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 50.5,
+      "end_s": 51.480000000000004,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 51.480000000000004,
+      "end_s": 55.480000000000004,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 55.480000000000004,
+      "end_s": 59.480000000000004,
+      "side": "R"
+    }
+  ],
+  "trials": [
+    {
+      "label": "Forward",
+      "command": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "start_s": 6.0,
+      "zero_s": 13.0,
+      "end_s": 18.0
+    },
+    {
+      "label": "Forward",
+      "command": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "start_s": 18.0,
+      "zero_s": 25.0,
+      "end_s": 30.0
+    },
+    {
+      "label": "Forward",
+      "command": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "start_s": 30.0,
+      "zero_s": 37.0,
+      "end_s": 42.0
+    },
+    {
+      "label": "Forward",
+      "command": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "start_s": 42.0,
+      "zero_s": 49.0,
+      "end_s": 54.0
+    }
+  ],
+  "carry_profile": {
+    "omni": {
+      "back_stride": 1.49,
+      "back_heading": 0.042,
+      "back_gather_r": -0.065,
+      "side_stride": 1.22,
+      "side_stride_right": 1.36,
+      "side_tuck": 0.081,
+      "side_forward": -0.102,
+      "yaw_center_x": -0.116,
+      "yaw_center_y": -0.015
+    },
+    "ranges": {
+      "Forward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "stride_scale": [
+          1.44,
+          1.3,
+          1.195,
+          1.205
+        ],
+        "heading_trim": [
+          -0.245,
+          -0.163,
+          -0.12,
+          -0.085
+        ]
+      },
+      "Backward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "stride_scale": [
+          1.61,
+          1.34,
+          1.28
+        ]
+      },
+      "Left": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "stride_scale": [
+          1.06,
+          1.06,
+          1.125
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "stride_scale": [
+          1.67,
+          1.43,
+          1.37
+        ]
+      }
+    },
+    "tuning": {
+      "Backward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "back_heading": [
+          0.005,
+          0.05,
+          0.04
+        ]
+      },
+      "Left": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "side_forward": [
+          -0.25,
+          -0.2,
+          -0.16
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "side_forward": [
+          -0.09,
+          -0.043,
+          -0.018
+        ]
+      },
+      "Turn left": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "yaw_center_x": [
+          -0.116,
+          -0.077,
+          -0.07
+        ],
+        "yaw_center_y": [
+          -0.03,
+          0.02,
+          0.04
+        ]
+      },
+      "Turn right": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "yaw_center_x": [
+          -0.175,
+          -0.125,
+          -0.1
+        ],
+        "yaw_center_y": [
+          -0.2,
+          -0.13,
+          -0.09
+        ]
+      }
+    },
+    "parking": {
+      "Forward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "right": [
+          -0.053,
+          -0.004,
+          0.016,
+          0.047
+        ]
+      },
+      "Backward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "right": [
+          -0.033,
+          -0.026,
+          -0.036
+        ]
+      },
+      "Left": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "right": [
+          -0.023,
+          -0.009,
+          0.006
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "left": [
+          -0.004,
+          -0.005,
+          -0.009
+        ]
+      },
+      "Turn left": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "right": [
+          0.002,
+          0.017,
+          0.023
+        ]
+      },
+      "Turn right": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "left": [
+          0.014,
+          0.029,
+          0.03
+        ]
+      }
+    }
+  },
+  "revisions": [
+    {
+      "frame": 300,
+      "command": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 312
+    },
+    {
+      "frame": 650,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 675
+    },
+    {
+      "frame": 900,
+      "command": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 912
+    },
+    {
+      "frame": 1250,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 1275
+    },
+    {
+      "frame": 1500,
+      "command": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 1512
+    },
+    {
+      "frame": 1850,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 1875
+    },
+    {
+      "frame": 2100,
+      "command": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 2112
+    },
+    {
+      "frame": 2450,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 2475
+    }
+  ],
+  "measured_load_gather": [
+    {
+      "start_s": 14.5,
+      "forward_command_mps": 0.1,
+      "side": "R",
+      "measured_added_mass_kg": 0.9985745512681247,
+      "nominal_trim_m": -0.053,
+      "measured_load_offset_m": 0.0
+    },
+    {
+      "start_s": 26.5,
+      "forward_command_mps": 0.2,
+      "side": "R",
+      "measured_added_mass_kg": 0.9991354757492602,
+      "nominal_trim_m": -0.004,
+      "measured_load_offset_m": 0.0
+    },
+    {
+      "start_s": 38.5,
+      "forward_command_mps": 0.3,
+      "side": "R",
+      "measured_added_mass_kg": 1.0001046615963989,
+      "nominal_trim_m": 0.016,
+      "measured_load_offset_m": 0.02600272120150637
+    },
+    {
+      "start_s": 50.5,
+      "forward_command_mps": 0.4,
+      "side": "R",
+      "measured_added_mass_kg": 1.00084666551385,
+      "nominal_trim_m": 0.047,
+      "measured_load_offset_m": 0.019016086644763147
+    }
+  ]
+}

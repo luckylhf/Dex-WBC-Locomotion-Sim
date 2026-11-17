@@ -1,0 +1,2636 @@
+{
+  "completed": true,
+  "frames": 10101,
+  "physics_steps": 40400,
+  "physics_resets": 0,
+  "duration_s": 201.9999999998888,
+  "go_s": null,
+  "zero_s": null,
+  "empty_box_enclosure_dimensions_m": [
+    0.29,
+    0.35,
+    0.19
+  ],
+  "empty_box_wall_thickness_m": 0.014,
+  "model_box_mass_kg": 10.65,
+  "empty_shell_mass_kg": 0.65,
+  "added_mass_kg": 10.0,
+  "added_mass_locations_m": [
+    [
+      -0.157,
+      0.182,
+      -0.065
+    ],
+    [
+      -0.157,
+      -0.182,
+      -0.065
+    ]
+  ],
+  "added_mass_per_grip_kg": 5.0,
+  "estimator_empty_tare_kg": 0.65,
+  "box_local_com_m": [
+    -0.14741784037558686,
+    0.0,
+    -0.06266474297299493
+  ],
+  "distal_masses_kg": [
+    0.546466,
+    0.546466
+  ],
+  "policy_sha256": "0a0d3b3ba10922ef6c05fe36a1ce51a70d46c2546ff0d0c635008777d8813b98",
+  "model_sha256": "14b42c22ae6611101f714bf02fbf110fb3a962d74dad0cebd9de67c6ebf1ec7d",
+  "box_free_qadr": 36,
+  "body_ground_steps": 0,
+  "box_contact_steps": 0,
+  "box_ground_steps": 0,
+  "foot_rub_steps": 0,
+  "grip_over_20mm_frames": 0,
+  "options": {
+    "mass": 0.65,
+    "seed": 0,
+    "reach": 0.29,
+    "hand_height": -0.02,
+    "grip_softness": 0.04,
+    "gravity_gain": 1.0,
+    "payload_gain": 1.0,
+    "cop_shift": 0.0,
+    "stride_scale": 1.42,
+    "heading_trim": -0.31,
+    "stand_only": false,
+    "stand_seconds": 20.0,
+    "added_mass": 10.0,
+    "transfer_start": 5.0,
+    "transfer_ramp": 0.24,
+    "lean_gain": 0.2,
+    "com_gain": 1.0,
+    "force_tau": 0.2,
+    "arm_damping_scale": 5.0,
+    "waist_damping_scale": 7.0,
+    "reference_control": false,
+    "walk": false,
+    "omni": true,
+    "walk_start": 10.0,
+    "profile": "experiments/loaded_omni/y5.json"
+  },
+  "planned_blocks": [
+    {
+      "kind": "stand",
+      "start_s": 0.0,
+      "end_s": 5.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 5.0,
+      "end_s": 9.0,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 9.0,
+      "end_s": 10.24,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 10.24,
+      "end_s": 11.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 11.0,
+      "end_s": 11.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 11.5,
+      "end_s": 12.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 12.0,
+      "end_s": 12.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 12.5,
+      "end_s": 13.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 13.0,
+      "end_s": 13.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 13.5,
+      "end_s": 14.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 14.0,
+      "end_s": 14.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 14.5,
+      "end_s": 15.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 15.0,
+      "end_s": 15.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 15.5,
+      "end_s": 16.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 16.0,
+      "end_s": 16.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 16.5,
+      "end_s": 17.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 17.0,
+      "end_s": 17.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 17.5,
+      "end_s": 18.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 18.0,
+      "end_s": 18.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 18.5,
+      "end_s": 19.2,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 19.2,
+      "end_s": 22.240000000000002,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 22.240000000000002,
+      "end_s": 23.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 23.0,
+      "end_s": 23.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 23.5,
+      "end_s": 24.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 24.0,
+      "end_s": 24.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 24.5,
+      "end_s": 25.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 25.0,
+      "end_s": 25.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 25.5,
+      "end_s": 26.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 26.0,
+      "end_s": 26.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 26.5,
+      "end_s": 27.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 27.0,
+      "end_s": 27.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 27.5,
+      "end_s": 28.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 28.0,
+      "end_s": 28.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 28.5,
+      "end_s": 29.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 29.0,
+      "end_s": 29.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 29.5,
+      "end_s": 30.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 30.0,
+      "end_s": 30.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 30.5,
+      "end_s": 31.2,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 31.2,
+      "end_s": 34.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 34.24,
+      "end_s": 35.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 35.0,
+      "end_s": 35.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 35.5,
+      "end_s": 36.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 36.0,
+      "end_s": 36.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 36.5,
+      "end_s": 37.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 37.0,
+      "end_s": 37.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 37.5,
+      "end_s": 38.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 38.0,
+      "end_s": 38.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 38.5,
+      "end_s": 39.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 39.0,
+      "end_s": 39.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 39.5,
+      "end_s": 40.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 40.0,
+      "end_s": 40.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 40.5,
+      "end_s": 41.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 41.0,
+      "end_s": 41.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 41.5,
+      "end_s": 42.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 42.0,
+      "end_s": 42.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 42.5,
+      "end_s": 43.160000000000004,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 43.160000000000004,
+      "end_s": 46.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 46.24,
+      "end_s": 47.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 47.0,
+      "end_s": 47.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 47.5,
+      "end_s": 48.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 48.0,
+      "end_s": 48.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 48.5,
+      "end_s": 49.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 49.0,
+      "end_s": 49.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 49.5,
+      "end_s": 50.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 50.0,
+      "end_s": 50.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 50.5,
+      "end_s": 51.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 51.0,
+      "end_s": 51.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 51.5,
+      "end_s": 52.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 52.0,
+      "end_s": 52.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 52.5,
+      "end_s": 53.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 53.0,
+      "end_s": 53.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 53.5,
+      "end_s": 54.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 54.0,
+      "end_s": 54.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 54.5,
+      "end_s": 55.14,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 55.14,
+      "end_s": 58.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 58.24,
+      "end_s": 59.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 59.0,
+      "end_s": 59.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 59.5,
+      "end_s": 60.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 60.0,
+      "end_s": 60.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 60.5,
+      "end_s": 61.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 61.0,
+      "end_s": 61.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 61.5,
+      "end_s": 62.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 62.0,
+      "end_s": 62.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 62.5,
+      "end_s": 63.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 63.0,
+      "end_s": 63.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 63.5,
+      "end_s": 64.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 64.0,
+      "end_s": 64.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 64.5,
+      "end_s": 65.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 65.0,
+      "end_s": 65.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 65.5,
+      "end_s": 66.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 66.0,
+      "end_s": 66.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 66.5,
+      "end_s": 67.46000000000001,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 67.46000000000001,
+      "end_s": 70.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 70.24,
+      "end_s": 71.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 71.0,
+      "end_s": 71.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 71.5,
+      "end_s": 72.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 72.0,
+      "end_s": 72.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 72.5,
+      "end_s": 73.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 73.0,
+      "end_s": 73.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 73.5,
+      "end_s": 74.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 74.0,
+      "end_s": 74.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 74.5,
+      "end_s": 75.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 75.0,
+      "end_s": 75.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 75.5,
+      "end_s": 76.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 76.0,
+      "end_s": 76.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 76.5,
+      "end_s": 77.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 77.0,
+      "end_s": 77.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 77.5,
+      "end_s": 78.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 78.0,
+      "end_s": 78.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 78.5,
+      "end_s": 79.46000000000001,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 79.46000000000001,
+      "end_s": 82.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 82.24,
+      "end_s": 83.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 83.0,
+      "end_s": 83.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 83.5,
+      "end_s": 84.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 84.0,
+      "end_s": 84.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 84.5,
+      "end_s": 85.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 85.0,
+      "end_s": 85.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 85.5,
+      "end_s": 86.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 86.0,
+      "end_s": 86.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 86.5,
+      "end_s": 87.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 87.0,
+      "end_s": 87.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 87.5,
+      "end_s": 88.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 88.0,
+      "end_s": 88.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 88.5,
+      "end_s": 89.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 89.0,
+      "end_s": 89.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 89.5,
+      "end_s": 90.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 90.0,
+      "end_s": 90.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 90.5,
+      "end_s": 91.46000000000001,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 91.46000000000001,
+      "end_s": 94.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 94.24,
+      "end_s": 95.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 95.0,
+      "end_s": 95.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 95.5,
+      "end_s": 96.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 96.0,
+      "end_s": 96.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 96.5,
+      "end_s": 97.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 97.0,
+      "end_s": 97.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 97.5,
+      "end_s": 98.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 98.0,
+      "end_s": 98.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 98.5,
+      "end_s": 99.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 99.0,
+      "end_s": 99.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 99.5,
+      "end_s": 100.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 100.0,
+      "end_s": 100.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 100.5,
+      "end_s": 101.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 101.0,
+      "end_s": 101.5,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 101.5,
+      "end_s": 102.0,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 102.0,
+      "end_s": 102.5,
+      "side": "R"
+    },
+    {
+      "kind": "gather",
+      "start_s": 102.5,
+      "end_s": 103.38,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 103.38,
+      "end_s": 106.24000000000001,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 106.24000000000001,
+      "end_s": 107.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 107.0,
+      "end_s": 107.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 107.5,
+      "end_s": 108.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 108.0,
+      "end_s": 108.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 108.5,
+      "end_s": 109.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 109.0,
+      "end_s": 109.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 109.5,
+      "end_s": 110.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 110.0,
+      "end_s": 110.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 110.5,
+      "end_s": 111.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 111.0,
+      "end_s": 111.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 111.5,
+      "end_s": 112.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 112.0,
+      "end_s": 112.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 112.5,
+      "end_s": 113.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 113.0,
+      "end_s": 113.5,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 113.5,
+      "end_s": 114.0,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 114.0,
+      "end_s": 114.5,
+      "side": "R"
+    },
+    {
+      "kind": "gather",
+      "start_s": 114.5,
+      "end_s": 115.36,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 115.36,
+      "end_s": 118.24000000000001,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 118.24000000000001,
+      "end_s": 119.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 119.0,
+      "end_s": 119.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 119.5,
+      "end_s": 120.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 120.0,
+      "end_s": 120.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 120.5,
+      "end_s": 121.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 121.0,
+      "end_s": 121.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 121.5,
+      "end_s": 122.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 122.0,
+      "end_s": 122.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 122.5,
+      "end_s": 123.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 123.0,
+      "end_s": 123.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 123.5,
+      "end_s": 124.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 124.0,
+      "end_s": 124.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 124.5,
+      "end_s": 125.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 125.0,
+      "end_s": 125.5,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 125.5,
+      "end_s": 126.0,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 126.0,
+      "end_s": 126.5,
+      "side": "R"
+    },
+    {
+      "kind": "gather",
+      "start_s": 126.5,
+      "end_s": 127.36,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 127.36,
+      "end_s": 130.24,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 130.24,
+      "end_s": 131.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 131.0,
+      "end_s": 131.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 131.5,
+      "end_s": 132.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 132.0,
+      "end_s": 132.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 132.5,
+      "end_s": 133.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 133.0,
+      "end_s": 133.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 133.5,
+      "end_s": 134.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 134.0,
+      "end_s": 134.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 134.5,
+      "end_s": 135.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 135.0,
+      "end_s": 135.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 135.5,
+      "end_s": 136.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 136.0,
+      "end_s": 136.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 136.5,
+      "end_s": 137.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 137.0,
+      "end_s": 137.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 137.5,
+      "end_s": 138.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 138.0,
+      "end_s": 138.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 138.5,
+      "end_s": 139.46,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 139.46,
+      "end_s": 142.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 142.24,
+      "end_s": 143.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 143.0,
+      "end_s": 143.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 143.5,
+      "end_s": 144.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 144.0,
+      "end_s": 144.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 144.5,
+      "end_s": 145.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 145.0,
+      "end_s": 145.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 145.5,
+      "end_s": 146.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 146.0,
+      "end_s": 146.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 146.5,
+      "end_s": 147.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 147.0,
+      "end_s": 147.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 147.5,
+      "end_s": 148.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 148.0,
+      "end_s": 148.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 148.5,
+      "end_s": 149.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 149.0,
+      "end_s": 149.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 149.5,
+      "end_s": 150.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 150.0,
+      "end_s": 150.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 150.5,
+      "end_s": 151.46,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 151.46,
+      "end_s": 154.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 154.24,
+      "end_s": 155.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 155.0,
+      "end_s": 155.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 155.5,
+      "end_s": 156.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 156.0,
+      "end_s": 156.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 156.5,
+      "end_s": 157.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 157.0,
+      "end_s": 157.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 157.5,
+      "end_s": 158.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 158.0,
+      "end_s": 158.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 158.5,
+      "end_s": 159.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 159.0,
+      "end_s": 159.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 159.5,
+      "end_s": 160.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 160.0,
+      "end_s": 160.5,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 160.5,
+      "end_s": 161.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 161.0,
+      "end_s": 161.5,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 161.5,
+      "end_s": 162.0,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 162.0,
+      "end_s": 162.5,
+      "side": "L"
+    },
+    {
+      "kind": "gather",
+      "start_s": 162.5,
+      "end_s": 163.38,
+      "side": "R"
+    },
+    {
+      "kind": "stand",
+      "start_s": 163.38,
+      "end_s": 166.24,
+      "side": "R"
+    },
+    {
+      "kind": "shift",
+      "start_s": 166.24,
+      "end_s": 167.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 167.0,
+      "end_s": 167.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 167.5,
+      "end_s": 168.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 168.0,
+      "end_s": 168.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 168.5,
+      "end_s": 169.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 169.0,
+      "end_s": 169.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 169.5,
+      "end_s": 170.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 170.0,
+      "end_s": 170.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 170.5,
+      "end_s": 171.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 171.0,
+      "end_s": 171.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 171.5,
+      "end_s": 172.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 172.0,
+      "end_s": 172.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 172.5,
+      "end_s": 173.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 173.0,
+      "end_s": 173.5,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 173.5,
+      "end_s": 174.0,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 174.0,
+      "end_s": 174.5,
+      "side": "R"
+    },
+    {
+      "kind": "gather",
+      "start_s": 174.5,
+      "end_s": 175.46,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 175.46,
+      "end_s": 178.24,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 178.24,
+      "end_s": 179.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 179.0,
+      "end_s": 179.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 179.5,
+      "end_s": 180.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 180.0,
+      "end_s": 180.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 180.5,
+      "end_s": 181.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 181.0,
+      "end_s": 181.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 181.5,
+      "end_s": 182.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 182.0,
+      "end_s": 182.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 182.5,
+      "end_s": 183.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 183.0,
+      "end_s": 183.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 183.5,
+      "end_s": 184.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 184.0,
+      "end_s": 184.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 184.5,
+      "end_s": 185.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 185.0,
+      "end_s": 185.5,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 185.5,
+      "end_s": 186.0,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 186.0,
+      "end_s": 186.5,
+      "side": "R"
+    },
+    {
+      "kind": "gather",
+      "start_s": 186.5,
+      "end_s": 187.46,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 187.46,
+      "end_s": 190.24,
+      "side": "L"
+    },
+    {
+      "kind": "shift",
+      "start_s": 190.24,
+      "end_s": 191.0,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 191.0,
+      "end_s": 191.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 191.5,
+      "end_s": 192.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 192.0,
+      "end_s": 192.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 192.5,
+      "end_s": 193.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 193.0,
+      "end_s": 193.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 193.5,
+      "end_s": 194.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 194.0,
+      "end_s": 194.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 194.5,
+      "end_s": 195.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 195.0,
+      "end_s": 195.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 195.5,
+      "end_s": 196.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 196.0,
+      "end_s": 196.5,
+      "side": "R"
+    },
+    {
+      "kind": "walk",
+      "start_s": 196.5,
+      "end_s": 197.0,
+      "side": "L"
+    },
+    {
+      "kind": "walk",
+      "start_s": 197.0,
+      "end_s": 197.5,
+      "side": "R"
+    },
+    {
+      "kind": "brake",
+      "start_s": 197.5,
+      "end_s": 198.0,
+      "side": "L"
+    },
+    {
+      "kind": "brake",
+      "start_s": 198.0,
+      "end_s": 198.5,
+      "side": "R"
+    },
+    {
+      "kind": "gather",
+      "start_s": 198.5,
+      "end_s": 199.46,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 199.46,
+      "end_s": 203.46,
+      "side": "L"
+    },
+    {
+      "kind": "stand",
+      "start_s": 203.46,
+      "end_s": 207.46,
+      "side": "L"
+    }
+  ],
+  "trials": [
+    {
+      "label": "Forward",
+      "command": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "start_s": 10.0,
+      "zero_s": 17.0,
+      "end_s": 22.0
+    },
+    {
+      "label": "Forward",
+      "command": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "start_s": 22.0,
+      "zero_s": 29.0,
+      "end_s": 34.0
+    },
+    {
+      "label": "Forward",
+      "command": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "start_s": 34.0,
+      "zero_s": 41.0,
+      "end_s": 46.0
+    },
+    {
+      "label": "Forward",
+      "command": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "start_s": 46.0,
+      "zero_s": 53.0,
+      "end_s": 58.0
+    },
+    {
+      "label": "Left",
+      "command": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "start_s": 58.0,
+      "zero_s": 65.0,
+      "end_s": 70.0
+    },
+    {
+      "label": "Left",
+      "command": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "start_s": 70.0,
+      "zero_s": 77.0,
+      "end_s": 82.0
+    },
+    {
+      "label": "Left",
+      "command": [
+        0.0,
+        0.3,
+        0.0
+      ],
+      "start_s": 82.0,
+      "zero_s": 89.0,
+      "end_s": 94.0
+    },
+    {
+      "label": "Right",
+      "command": [
+        0.0,
+        -0.1,
+        0.0
+      ],
+      "start_s": 94.0,
+      "zero_s": 101.0,
+      "end_s": 106.0
+    },
+    {
+      "label": "Right",
+      "command": [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      "start_s": 106.0,
+      "zero_s": 113.0,
+      "end_s": 118.0
+    },
+    {
+      "label": "Right",
+      "command": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "start_s": 118.0,
+      "zero_s": 125.0,
+      "end_s": 130.0
+    },
+    {
+      "label": "Turn left",
+      "command": [
+        0.0,
+        0.0,
+        0.15
+      ],
+      "start_s": 130.0,
+      "zero_s": 137.0,
+      "end_s": 142.0
+    },
+    {
+      "label": "Turn left",
+      "command": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "start_s": 142.0,
+      "zero_s": 149.0,
+      "end_s": 154.0
+    },
+    {
+      "label": "Turn left",
+      "command": [
+        0.0,
+        0.0,
+        0.45
+      ],
+      "start_s": 154.0,
+      "zero_s": 161.0,
+      "end_s": 166.0
+    },
+    {
+      "label": "Turn right",
+      "command": [
+        0.0,
+        0.0,
+        -0.15
+      ],
+      "start_s": 166.0,
+      "zero_s": 173.0,
+      "end_s": 178.0
+    },
+    {
+      "label": "Turn right",
+      "command": [
+        0.0,
+        0.0,
+        -0.3
+      ],
+      "start_s": 178.0,
+      "zero_s": 185.0,
+      "end_s": 190.0
+    },
+    {
+      "label": "Turn right",
+      "command": [
+        0.0,
+        0.0,
+        -0.45
+      ],
+      "start_s": 190.0,
+      "zero_s": 197.0,
+      "end_s": 202.0
+    }
+  ],
+  "carry_profile": {
+    "omni": {
+      "back_stride": 1.49,
+      "back_heading": 0.042,
+      "back_gather_r": -0.065,
+      "side_stride": 1.22,
+      "side_stride_right": 1.36,
+      "side_tuck": 0.081,
+      "side_forward": -0.102,
+      "yaw_center_x": -0.116,
+      "yaw_center_y": -0.015
+    },
+    "ranges": {
+      "Forward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "stride_scale": [
+          1.83,
+          1.54,
+          1.4,
+          1.36
+        ],
+        "heading_trim": [
+          -0.245,
+          -0.163,
+          -0.12,
+          -0.085
+        ],
+        "gather": [
+          0.38,
+          0.38,
+          0.3,
+          0.32
+        ],
+        "x_cop": [
+          0.025,
+          0.028,
+          0.026,
+          0.033
+        ],
+        "crouch": [
+          0.0401,
+          0.045,
+          0.0534,
+          0.0503
+        ],
+        "double": [
+          0.17685,
+          0.178,
+          0.1383,
+          0.18
+        ],
+        "lift": [
+          0.04482,
+          0.047,
+          0.0435,
+          0.047
+        ]
+      },
+      "Backward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "stride_scale": [
+          1.61,
+          1.34,
+          1.28
+        ]
+      },
+      "Left": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "stride_scale": [
+          0.88,
+          1.06,
+          1.125
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "stride_scale": [
+          2.26,
+          1.72,
+          1.58
+        ],
+        "gather": [
+          0.55,
+          0.54,
+          0.54
+        ]
+      },
+      "Turn left": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "gather": [
+          0.65,
+          0.65,
+          0.57
+        ]
+      }
+    },
+    "tuning": {
+      "Backward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "back_heading": [
+          0.005,
+          0.05,
+          0.04
+        ]
+      },
+      "Left": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "side_forward": [
+          -0.18,
+          -0.12,
+          -0.09
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "side_forward": [
+          0.04,
+          0.032,
+          0.037
+        ]
+      },
+      "Turn left": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "yaw_center_x": [
+          0.10068,
+          0.02284,
+          0.00088
+        ],
+        "yaw_center_y": [
+          -0.2558,
+          -0.06912,
+          -0.00444
+        ]
+      },
+      "Turn right": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "yaw_center_x": [
+          -0.0626,
+          -0.051,
+          -0.06436
+        ],
+        "yaw_center_y": [
+          -0.576,
+          -0.3236,
+          -0.24752
+        ]
+      }
+    },
+    "parking": {
+      "Forward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "right": [
+          0.005,
+          0.004,
+          0.035,
+          0.036
+        ]
+      },
+      "Backward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "right": [
+          -0.033,
+          -0.026,
+          -0.036
+        ]
+      },
+      "Left": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "right": [
+          -0.023,
+          -0.009,
+          0.006
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "left": [
+          -0.004,
+          -0.005,
+          0.024
+        ]
+      },
+      "Turn left": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "right": [
+          0.026,
+          0.039,
+          0.06
+        ]
+      },
+      "Turn right": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "left": [
+          0.05,
+          0.083,
+          0.085
+        ]
+      }
+    },
+    "park_center": {
+      "Forward": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "x": [
+          -0.015,
+          -0.015,
+          0.005,
+          0.005
+        ],
+        "y": [
+          -0.009,
+          -0.01,
+          0.02,
+          0.019
+        ]
+      },
+      "Right": {
+        "speeds": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "x": [
+          -0.003,
+          -0.003,
+          -0.003
+        ],
+        "y": [
+          -0.022,
+          -0.018,
+          -0.018
+        ]
+      },
+      "Turn left": {
+        "speeds": [
+          0.15,
+          0.3,
+          0.45
+        ],
+        "x": [
+          0,
+          0,
+          -0.008
+        ],
+        "y": [
+          0.0,
+          0.0,
+          0.027
+        ]
+      }
+    }
+  },
+  "revisions": [
+    {
+      "frame": 500,
+      "command": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 512
+    },
+    {
+      "frame": 850,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 875
+    },
+    {
+      "frame": 1100,
+      "command": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 1112
+    },
+    {
+      "frame": 1450,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 1475
+    },
+    {
+      "frame": 1700,
+      "command": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 1712
+    },
+    {
+      "frame": 2050,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 2075
+    },
+    {
+      "frame": 2300,
+      "command": [
+        0.4,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 2312
+    },
+    {
+      "frame": 2650,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 2675
+    },
+    {
+      "frame": 2900,
+      "command": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "splice_frame": 2912
+    },
+    {
+      "frame": 3250,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 3275
+    },
+    {
+      "frame": 3500,
+      "command": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "splice_frame": 3512
+    },
+    {
+      "frame": 3850,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 3875
+    },
+    {
+      "frame": 4100,
+      "command": [
+        0.0,
+        0.3,
+        0.0
+      ],
+      "splice_frame": 4112
+    },
+    {
+      "frame": 4450,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 4475
+    },
+    {
+      "frame": 4700,
+      "command": [
+        0.0,
+        -0.1,
+        0.0
+      ],
+      "splice_frame": 4712
+    },
+    {
+      "frame": 5050,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 5075
+    },
+    {
+      "frame": 5300,
+      "command": [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      "splice_frame": 5312
+    },
+    {
+      "frame": 5650,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 5675
+    },
+    {
+      "frame": 5900,
+      "command": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "splice_frame": 5912
+    },
+    {
+      "frame": 6250,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 6275
+    },
+    {
+      "frame": 6500,
+      "command": [
+        0.0,
+        0.0,
+        0.15
+      ],
+      "splice_frame": 6512
+    },
+    {
+      "frame": 6850,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 6875
+    },
+    {
+      "frame": 7100,
+      "command": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "splice_frame": 7112
+    },
+    {
+      "frame": 7450,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 7475
+    },
+    {
+      "frame": 7700,
+      "command": [
+        0.0,
+        0.0,
+        0.45
+      ],
+      "splice_frame": 7712
+    },
+    {
+      "frame": 8050,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 8075
+    },
+    {
+      "frame": 8300,
+      "command": [
+        0.0,
+        0.0,
+        -0.15
+      ],
+      "splice_frame": 8312
+    },
+    {
+      "frame": 8650,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 8675
+    },
+    {
+      "frame": 8900,
+      "command": [
+        0.0,
+        0.0,
+        -0.3
+      ],
+      "splice_frame": 8912
+    },
+    {
+      "frame": 9250,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 9275
+    },
+    {
+      "frame": 9500,
+      "command": [
+        0.0,
+        0.0,
+        -0.45
+      ],
+      "splice_frame": 9512
+    },
+    {
+      "frame": 9850,
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "splice_frame": 9875
+    }
+  ],
+  "balance_fields": [
+    "raw_forward_torque_nm",
+    "filtered_forward_torque_nm",
+    "target_chest_pitch_deg",
+    "actual_chest_pitch_deg",
+    "waist_target_rad",
+    "wrench_valid",
+    "reference_com_shift_m",
+    "filtered_support_force_n"
+  ],
+  "load_transfer": {
+    "start_s": 5.0,
+    "fully_transferred_s": 5.24,
+    "initial_upward_force_per_grip_n": 49.050000000000004,
+    "method": "Smooth withdrawal of separate vertical support at both added-mass centres"
+  }
+}

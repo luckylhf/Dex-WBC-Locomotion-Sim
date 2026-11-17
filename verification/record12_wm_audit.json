@@ -1,0 +1,151 @@
+{
+  "horizon": 8,
+  "control_dt": 0.02,
+  "source_sha256": "41e97fe448940592f731c6bd1e942ef7ebc1c0e7bce263e1bc91ed0e8dc397c0",
+  "results": [
+    {
+      "episode": "v0.1",
+      "phase": "stand",
+      "windows": 25,
+      "forward_displacement_mae_m": 9.034000686369836e-05,
+      "lateral_displacement_mae_m": 0.0003100598696619272,
+      "forward_speed_mae_mps": 0.0019532563164830208,
+      "joint_position_mae_rad": 0.00211317534558475
+    },
+    {
+      "episode": "v0.1",
+      "phase": "start",
+      "windows": 17,
+      "forward_displacement_mae_m": 0.00023029372096061707,
+      "lateral_displacement_mae_m": 0.00032114944770000875,
+      "forward_speed_mae_mps": 0.003304838202893734,
+      "joint_position_mae_rad": 0.0021920083090662956
+    },
+    {
+      "episode": "v0.1",
+      "phase": "walk",
+      "windows": 69,
+      "forward_displacement_mae_m": 0.0003223374951630831,
+      "lateral_displacement_mae_m": 0.0002871585311368108,
+      "forward_speed_mae_mps": 0.0036456736270338297,
+      "joint_position_mae_rad": 0.0023057435173541307
+    },
+    {
+      "episode": "v0.1",
+      "phase": "stop",
+      "windows": 25,
+      "forward_displacement_mae_m": 0.00021996736177243292,
+      "lateral_displacement_mae_m": 0.0004687044129241258,
+      "forward_speed_mae_mps": 0.0025198133662343025,
+      "joint_position_mae_rad": 0.002283642766997218
+    },
+    {
+      "episode": "v0.2",
+      "phase": "stand",
+      "windows": 25,
+      "forward_displacement_mae_m": 9.03728578123264e-05,
+      "lateral_displacement_mae_m": 0.00031003833282738924,
+      "forward_speed_mae_mps": 0.0019535431638360023,
+      "joint_position_mae_rad": 0.002113188151270151
+    },
+    {
+      "episode": "v0.2",
+      "phase": "start",
+      "windows": 17,
+      "forward_displacement_mae_m": 0.0002655762655194849,
+      "lateral_displacement_mae_m": 0.00030460828565992415,
+      "forward_speed_mae_mps": 0.003930925857275724,
+      "joint_position_mae_rad": 0.0023410229478031397
+    },
+    {
+      "episode": "v0.2",
+      "phase": "walk",
+      "windows": 69,
+      "forward_displacement_mae_m": 0.0003428282216191292,
+      "lateral_displacement_mae_m": 0.0002794722968246788,
+      "forward_speed_mae_mps": 0.003843144979327917,
+      "joint_position_mae_rad": 0.0024037191178649664
+    },
+    {
+      "episode": "v0.2",
+      "phase": "stop",
+      "windows": 25,
+      "forward_displacement_mae_m": 0.000263214111328125,
+      "lateral_displacement_mae_m": 0.0004872094141319394,
+      "forward_speed_mae_mps": 0.002942858263850212,
+      "joint_position_mae_rad": 0.0023489731829613447
+    },
+    {
+      "episode": "v0.3",
+      "phase": "stand",
+      "windows": 25,
+      "forward_displacement_mae_m": 9.040992881637067e-05,
+      "lateral_displacement_mae_m": 0.00031001828028820455,
+      "forward_speed_mae_mps": 0.0019538244232535362,
+      "joint_position_mae_rad": 0.0021132032852619886
+    },
+    {
+      "episode": "v0.3",
+      "phase": "start",
+      "windows": 17,
+      "forward_displacement_mae_m": 0.0002512755454517901,
+      "lateral_displacement_mae_m": 0.0002961212885566056,
+      "forward_speed_mae_mps": 0.003882560646161437,
+      "joint_position_mae_rad": 0.002334427088499069
+    },
+    {
+      "episode": "v0.3",
+      "phase": "walk",
+      "windows": 69,
+      "forward_displacement_mae_m": 0.00030455770320259035,
+      "lateral_displacement_mae_m": 0.0002877894148696214,
+      "forward_speed_mae_mps": 0.004826988559216261,
+      "joint_position_mae_rad": 0.002601108280941844
+    },
+    {
+      "episode": "v0.3",
+      "phase": "stop",
+      "windows": 25,
+      "forward_displacement_mae_m": 0.0002050876646535471,
+      "lateral_displacement_mae_m": 0.0004052987787872553,
+      "forward_speed_mae_mps": 0.00274643930606544,
+      "joint_position_mae_rad": 0.002422030083835125
+    },
+    {
+      "episode": "v0.4",
+      "phase": "stand",
+      "windows": 25,
+      "forward_displacement_mae_m": 9.044758917298168e-05,
+      "lateral_displacement_mae_m": 0.00030999575392343104,
+      "forward_speed_mae_mps": 0.001954128034412861,
+      "joint_position_mae_rad": 0.0021132153924554586
+    },
+    {
+      "episode": "v0.4",
+      "phase": "start",
+      "windows": 17,
+      "forward_displacement_mae_m": 0.00025393639225512743,
+      "lateral_displacement_mae_m": 0.0003011267108377069,
+      "forward_speed_mae_mps": 0.0037107274401932955,
+      "joint_position_mae_rad": 0.0022893385030329227
+    },
+    {
+      "episode": "v0.4",
+      "phase": "walk",
+      "windows": 69,
+      "forward_displacement_mae_m": 0.0003402263391762972,
+      "lateral_displacement_mae_m": 0.00030220532789826393,
+      "forward_speed_mae_mps": 0.005752798169851303,
+      "joint_position_mae_rad": 0.0027034757658839226
+    },
+    {
+      "episode": "v0.4",
+      "phase": "stop",
+      "windows": 25,
+      "forward_displacement_mae_m": 0.00017182349984068424,
+      "lateral_displacement_mae_m": 0.0003895096597261727,
+      "forward_speed_mae_mps": 0.0023727542720735073,
+      "joint_position_mae_rad": 0.0024385214783251286
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "completed": true,
+  "continuous_50hz_clock": true,
+  "pre_transfer_stable": true,
+  "physics_resets": 0,
+  "transfer_start_s": 5.0,
+  "full_load_s": 5.24,
+  "stable_at_s": 6.539999999999883,
+  "settle_from_start_s": 1.5399999999998828,
+  "settle_from_full_load_s": 1.2999999999998826,
+  "sustained_hold_s": 53.46000000001236,
+  "foot_horizontal_max_mm": [
+    3.799268120879436,
+    2.946182204490297
+  ],
+  "foot_vertical_max_mm": [
+    0.0019147944434472208,
+    0.0034610197132134424
+  ],
+  "feet_min_normal_fraction": [
+    0.44593434996796205,
+    0.42328530842445
+  ],
+  "grip_peak_mm": 2.8441567297939345,
+  "foot_rub_steps": 0,
+  "box_contact_steps": 0,
+  "root_net_xy_mm": [
+    -5.980683395641451,
+    -8.219615661104642
+  ],
+  "final_arm_max_range_deg": 1.5255060153762656e-05,
+  "final_chest_mean_deg": [
+    -3.3116410489155723,
+    3.457994912220747
+  ],
+  "final_chest_range_deg": [
+    0.0004729065173596503,
+    0.004966776465259226
+  ],
+  "final_box_mean_deg": [
+    3.4690228909572824,
+    -2.410921852465926,
+    -0.4345540817862517
+  ],
+  "final_box_range_deg": [
+    0.004976605231103548,
+    0.0004781182764097558,
+    0.010902647923906938
+  ],
+  "final_wrist_mean_n": 104.47651256115397,
+  "final_wrist_range_n": 7.226715992203481e-05,
+  "final_filtered_wrist_n": 104.47651484471565,
+  "final_estimated_total_kg": 10.650001513222797,
+  "final_shift_reference_mm": -43.068694445016455,
+  "limits": {
+    "window_s": 1.0,
+    "angular_range_deg": 1.0,
+    "position_range_mm": 5.0,
+    "wrist_range_n": 8.0,
+    "ankle_displacement_mm": 5.0,
+    "foot_min_normal_fraction": 0.1,
+    "grip_peak_mm": 15.0,
+    "sustained_hold_s": 5.0
+  }
+}
