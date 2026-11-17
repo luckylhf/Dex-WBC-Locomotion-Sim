@@ -121,6 +121,7 @@ m_inst = (F_box,left,z + F_box,right,z) / 9.81
 - [运行与排查](docs/OPERATION.md)
 - [验收结果与已知限制](docs/ACCEPTANCE.md)
 - [控制架构与真机接口](docs/ARCHITECTURE.md)
+- [真机部署建议与分阶段验收](docs/DEPLOYMENT_RECOMMENDATIONS.md)
 - [交付复验记录](verification/delivery_validation.json)
 - [版本说明](docs/RELEASE_NOTES.md)
 - [GitHub 仓库交付说明](docs/GITHUB_PACKAGE.md)
