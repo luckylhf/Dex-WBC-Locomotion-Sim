@@ -10,9 +10,10 @@
   "checkpoint": "record_12_iter_032080.pt",
   "checkpoint_sha256": "41e97fe448940592f731c6bd1e942ef7ebc1c0e7bce263e1bc91ed0e8dc397c0",
   "iteration": 32080,
-  "model_sha256": "17573c55d1c9d9d43b2e44a5e3ebc237027bfcfb6f5b5d928aa0205792548194",
+  "model_sha256": "aabc2c5f6b5f7e4dcb2d1a60c8dac51003d0129bb1383ea5bbd21f31e698082a",
+  "policy_source_model_sha256": "17573c55d1c9d9d43b2e44a5e3ebc237027bfcfb6f5b5d928aa0205792548194",
   "policy_sha256": "0a0d3b3ba10922ef6c05fe36a1ce51a70d46c2546ff0d0c635008777d8813b98",
-  "compiled_model_sha256": "6d2ddbd363dcf565a8cf206317df816ea65b49adbc03dc9b99b684e232b874fe",
+  "compiled_model_sha256": "c09fea0d89e2d8937174c530d4cacbb0bb92a5f2473eaa38e3dc209094d169c3",
   "mujoco_version": "3.11.0",
   "joint_names": [
     "hip_pitch_l_joint",

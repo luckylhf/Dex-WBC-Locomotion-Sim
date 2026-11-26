@@ -3,7 +3,8 @@
   "head": "fixed_at_urdf_zero",
   "hands": false,
   "source_urdf_sha256": "29ac0559e7a2a07be471f81be758f67a2e4fbfc994f6778afc0d01140376de5b",
-  "model_sha256": "17573c55d1c9d9d43b2e44a5e3ebc237027bfcfb6f5b5d928aa0205792548194",
+  "model_sha256": "aabc2c5f6b5f7e4dcb2d1a60c8dac51003d0129bb1383ea5bbd21f31e698082a",
+  "foot_collision_source": "Tienkung_Dex_Model_All@144dea522115f14355797ae18b23ce52ee679e5b",
   "joint_names": [
     "hip_pitch_l_joint",
     "hip_roll_l_joint",

@@ -1,6 +1,6 @@
 # Isaac Sim 空手与抱箱仿真
 
-运行入口使用 Isaac Sim 5.1 / Isaac Lab 2.3.0 的 CPU PhysX。空手为 200 Hz 物理步进，带载示例为 400 Hz，WBC 均为 50 Hz。地面默认厚 2 m，顶面保持 z=0。带载入口以抓持接口反力估重，配重位于两侧腕端。
+运行入口使用 Isaac Sim 5.1 / Isaac Lab 2.3.0 的 CPU PhysX。空手为 200 Hz 物理步进，带载示例为 400 Hz，WBC 均为 50 Hz。地面默认厚 2 m，顶面保持 z=0。带载入口以抓持接口反力估重，配重位于两侧腕端。 URDF 导入配置为 `collision_from_visuals=False`、`replace_cylinders_with_capsules=True`，双脚共 14 根胶囊。
 
 ## Linux x86_64 离线安装与运行
 

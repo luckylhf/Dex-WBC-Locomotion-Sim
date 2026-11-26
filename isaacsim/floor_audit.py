@@ -1,4 +1,4 @@
-"""Evaluate signed foot-cylinder clearance from recorded root and joint poses."""
+"""Evaluate signed foot-primitive clearance from recorded root and joint poses."""
 import argparse
 import json
 from pathlib import Path
@@ -8,13 +8,15 @@ import numpy as np
 
 
 def measure(model, folder):
-    """Use the authored cylinder envelope with the scene ground surface at z=0."""
+    """Use the authored foot collision envelope with the scene ground surface at z=0."""
     data = mujoco.MjData(model)
     feet = [model.body(f"robot/ankle_roll_{side}_link").id for side in "lr"]
-    ids = [np.flatnonzero((model.geom_bodyid == foot) &
-                          (model.geom_type == mujoco.mjtGeom.mjGEOM_CYLINDER)) for foot in feet]
+    cylinder = model.geom_type == mujoco.mjtGeom.mjGEOM_CYLINDER
+    capsule = model.geom_type == mujoco.mjtGeom.mjGEOM_CAPSULE
+    collidable = (model.geom_contype | model.geom_conaffinity) != 0
+    ids = [np.flatnonzero((model.geom_bodyid == foot) & collidable & (cylinder | capsule)) for foot in feet]
     if any(len(foot) != 7 for foot in ids):
-        raise ValueError("Expected seven original foot cylinders per side")
+        raise ValueError("Expected seven collidable foot primitives per side")
     with np.load(folder / "rollout.trajectory.npz") as archive:
         poses = archive["qpos"]
         times = archive["physics_time"]
@@ -27,7 +29,8 @@ def measure(model, folder):
         for j, geoms in enumerate(ids):
             axis_z = data.geom_xmat[geoms].reshape(-1, 3, 3)[:, 2, 2]
             radius, half_length = model.geom_size[geoms, :2].T
-            extent = radius * np.sqrt(np.maximum(0., 1. - axis_z ** 2)) + half_length * abs(axis_z)
+            radial_z = np.where(capsule[geoms], radius, radius * np.sqrt(np.maximum(0., 1. - axis_z ** 2)))
+            extent = radial_z + half_length * abs(axis_z)
             heights[i, j] = np.min(data.geom_xpos[geoms, 2] - extent)
 
     records = {}

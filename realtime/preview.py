@@ -48,11 +48,15 @@ class LegIK:
         mujoco.mj_forward(m,d)
         self.neutral_feet = d.xpos[self.feet].copy()
         self.rot = d.xmat[self.feet].reshape(2,3,3).copy()
+        cylinder = m.geom_type == mujoco.mjtGeom.mjGEOM_CYLINDER
+        capsule = m.geom_type == mujoco.mjtGeom.mjGEOM_CAPSULE
+        collidable = (m.geom_contype | m.geom_conaffinity) != 0
         for i, foot in enumerate(self.feet):
-            geom = np.flatnonzero((m.geom_bodyid == foot) & (m.geom_type == mujoco.mjtGeom.mjGEOM_CYLINDER))
+            geom = np.flatnonzero((m.geom_bodyid == foot) & collidable & (cylinder | capsule))
             a = d.geom_xmat[geom].reshape(-1,3,3)[:,2,2]
             r,h = m.geom_size[geom,:2].T
-            floor = np.min(d.geom_xpos[geom,2]-r*np.sqrt(np.maximum(0,1-a*a))-h*np.abs(a))
+            radial_z = np.where(capsule[geom], r, r*np.sqrt(np.maximum(0,1-a*a)))
+            floor = np.min(d.geom_xpos[geom,2]-radial_z-h*np.abs(a))
             self.neutral_feet[i,2] -= floor
         self.neutral_feet[:,1] -= np.sign(self.neutral_feet[:,1])*cfg.narrow
         self.neutral_height = .971 + (self.neutral_feet[:,2]-d.xpos[self.feet,2]).mean()

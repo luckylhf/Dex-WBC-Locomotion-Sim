@@ -249,6 +249,7 @@ def run(out, joy=None):
         kd[ARM_ORDER] *= 5.
         kd[NAMES.index("waist_pitch_joint")] *= 7.
     spawn = sim_utils.UrdfFileCfg(asset_path=str(urdf.resolve()), usd_dir=str((out / "usd").resolve()),
+                                 collision_from_visuals=False, replace_cylinders_with_capsules=True,
                                  fix_base=False, merge_fixed_joints=False, joint_drive=None,
                                  self_collision=True, activate_contact_sensors=True,
                                  articulation_props=sim_utils.ArticulationRootPropertiesCfg(

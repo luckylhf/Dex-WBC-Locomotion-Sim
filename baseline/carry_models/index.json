@@ -3,7 +3,7 @@
   "models": [
     {
       "file": "empty.mjb",
-      "sha256": "074fdc1582908db873494e7abbab6580d4bbc528c66a5a9129149a7d14b0d4b3",
+      "sha256": "9152255cb063bcf827fd3ba7a749e6af27214ed194a253e43b6defca0cbb674c",
       "shell_kg": 0.65,
       "added_kg": 0.0,
       "solref_s": 0.075,
@@ -24,7 +24,7 @@
     },
     {
       "file": "one_kg.mjb",
-      "sha256": "0c5205e5fcd7ea9575d8b87dfa83309c00caf6436eb8b3db8c3c2666dc4532a6",
+      "sha256": "43e282af02ad859756a4cb7cb49fdf93c361dc69499e06668312e6fd383ae176",
       "shell_kg": 0.65,
       "added_kg": 1.0,
       "solref_s": 0.075,
@@ -45,7 +45,7 @@
     },
     {
       "file": "braced_ten_kg.mjb",
-      "sha256": "66d83a59a849fe70ab6a29764e105d10ed1757c39c80906b3e26927c84d16863",
+      "sha256": "d4d35466dc9cc609ddb0fffb14f047f63c172bbc1d24080f2221fb443acb5da0",
       "shell_kg": 0.65,
       "added_kg": 10.0,
       "solref_s": 0.04,

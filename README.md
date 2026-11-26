@@ -38,7 +38,7 @@ tar --zstd -xf packages/Dex-WBC-Locomotion-Sim-Linux-x86_64-Py311-wheels.tar.zst
 
 ## 共享网格与首次运行
 
-MuJoCo 的 MJCF 和 Isaac Sim 的 URDF 共用一套显示网格和一套碰撞网格，位于 `baseline/assets/dex_evt/`。MuJoCo 首次运行自动编译并校验所需的 `.mjb`，也可用 `./run_v7.sh compile` 一次生成四个缓存。Isaac Sim 使用相同网格生成 USD，并使用对应的 MuJoCo 模型计算运动学和箱体参数。Git 忽略两类缓存。
+MuJoCo 的 MJCF 和 Isaac Sim 的 URDF 共用一套显示网格和一套碰撞网格，位于 `baseline/assets/dex_evt/`。MuJoCo 首次运行自动编译并校验所需的 `.mjb`，也可用 `./run_v7.sh compile` 一次生成四个缓存。Isaac Sim 使用相同网格生成 USD，并使用对应的 MuJoCo 模型计算运动学和箱体参数。Git 忽略两类缓存。 两种仿真的 29 轴模型每脚均使用 7 根胶囊承担足底接触，脚部网格用于显示。
 
 ## 箱子重量检测
 
