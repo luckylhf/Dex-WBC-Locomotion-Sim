@@ -66,22 +66,40 @@ def arm_pose(reference, reach=.37, height=-.02):
     return np.asarray(pose),orientations
 
 
-def build_box(mass, orientations, solref=.05, *, added_mass=0.):
-    directory = bundle.parent / 'carry_models'
-    catalog = json.loads((directory / 'index.json').read_text())
-    if catalog['mujoco_version'] != mujoco.__version__:
-        raise RuntimeError('The bundled box models require MuJoCo ' + catalog['mujoco_version'])
-    for preset in catalog['models']:
-        if (mass == preset['shell_kg'] and added_mass == preset['added_kg']
-                and solref == preset['solref_s']
-                and np.allclose(orientations, preset['orientations'], rtol=0., atol=1e-12)):
-            path = directory / preset['file']
-            with path.open('rb') as stream:
-                actual = hashlib.file_digest(stream, 'sha256').hexdigest()
-            if actual != preset['sha256']:
-                raise RuntimeError(f'Box model checksum mismatch: {path.name}')
-            return mujoco.MjModel.from_binary_path(str(path))
-    raise ValueError('Unsupported box parameters in the customer package. Use a preset from run_v7.sh.')
+def build_box(mass, orientations, solref=.05, *, added_mass=0., content_mass=0.):
+    if content_mass == 0.:
+        directory = bundle.parent / 'carry_models'
+        catalog = json.loads((directory / 'index.json').read_text())
+        if catalog['mujoco_version'] != mujoco.__version__:
+            raise RuntimeError('The bundled box models require MuJoCo ' + catalog['mujoco_version'])
+        for preset in catalog['models']:
+            if (mass == preset['shell_kg'] and added_mass == preset['added_kg']
+                    and solref == preset['solref_s']
+                    and np.allclose(orientations, preset['orientations'], rtol=0., atol=1e-12)):
+                path = directory / preset['file']
+                with path.open('rb') as stream:
+                    actual = hashlib.file_digest(stream, 'sha256').hexdigest()
+                if actual != preset['sha256']:
+                    raise RuntimeError(f'Box model checksum mismatch: {path.name}')
+                return mujoco.MjModel.from_binary_path(str(path))
+
+    # The interactive viewer also supports custom shell/content masses. Build those
+    # from the same source MJCF and box construction as tools/compile_models.py so
+    # the robot remains identical to the frozen baseline.
+    from tools.compile_models import build
+    model = build(bundle.parents[1], contract, {
+        'shell_kg': mass, 'added_kg': added_mass, 'solref_s': solref,
+        'orientations': np.asarray(orientations, dtype=float),
+        'content_kg': content_mass,
+    })
+    baseline = mujoco.MjModel.from_binary_path(str(bundle / 'model.mjb'))
+    for field in ('body_mass', 'body_ipos', 'jnt_range', 'actuator_gainprm',
+                  'actuator_biasprm', 'geom_pos', 'geom_friction', 'dof_damping',
+                  'dof_armature'):
+        a, b = getattr(baseline, field), getattr(model, field)
+        if not np.array_equal(a, b[:len(a)]):
+            raise RuntimeError(f'Robot model changed while adding box: {field}')
+    return model
 
 
 class BoxPlant(Plant):

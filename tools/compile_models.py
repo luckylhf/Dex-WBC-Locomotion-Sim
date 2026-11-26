@@ -105,6 +105,13 @@ def add_box(spec, preset):
             box.add_geom(name=f"carry/wrist_load_{side}", type=mj.mjtGeom.mjGEOM_SPHERE,
                          pos=grip, size=[.008], mass=.5*preset["added_kg"], rgba=[0,0,0,0],
                          contype=0, conaffinity=0)
+    if preset.get("content_kg", 0.) > 0.:
+        inner = np.array([hx-h, hy-h])
+        half = min(hz-h, .03)
+        box.add_geom(name="carry/content", type=mj.mjtGeom.mjGEOM_BOX,
+                     pos=[0., 0., -hz+h+half], size=[*inner, half],
+                     mass=preset["content_kg"], rgba=[.32,.34,.38,1.],
+                     contype=0, conaffinity=0)
     for i,(side, word) in enumerate(zip(SIDES, ("left", "right"))):
         hand, grip, wrist = (f"carry/{label}_{side}" for label in ("hand", "box", "wrench"))
         tcp = f"robot/{word}_tcp_link"
