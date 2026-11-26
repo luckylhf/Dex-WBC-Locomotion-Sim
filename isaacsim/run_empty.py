@@ -1,8 +1,10 @@
 """Run the frozen v7 ONNX on live 29-axis Isaac Sim / PhysX feedback."""
 import argparse
 import json
+from itertools import count
 import math
 import os
+import signal
 import sys
 from pathlib import Path
 import time
@@ -14,6 +16,7 @@ from isaaclab.app import AppLauncher
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--out", required=True, type=Path)
 parser.add_argument("--seconds", type=float)
+parser.add_argument("--viewer", action="store_true", help="Watch the live PhysX run in the Isaac Sim viewport")
 parser.add_argument("--carry", action="store_true", help="Run the 16-slot wrist-load transfer protocol")
 parser.add_argument("--grip-k", type=float, default=10500.)
 parser.add_argument("--grip-d", type=float, default=32.)
@@ -34,11 +37,14 @@ parser.add_argument("--substeps", type=int, default=4)
 parser.add_argument("--options", type=Path)
 parser.add_argument("--start-pose", type=Path)
 parser.add_argument("--record-contact-failures", action="store_true")
+parser.add_argument("--teleop", action="store_true", help="Accept live empty-hand ROS Joy commands")
 args = parser.parse_args()
+if args.teleop and args.carry:
+    parser.error("--teleop is available for the empty-hand scene")
 if not math.isfinite(args.ground_thickness) or args.ground_thickness <= 0:
     parser.error("--ground-thickness must be positive and finite")
 
-app = AppLauncher(headless=True, device="cpu").app
+app = AppLauncher(headless=not args.viewer, device="cpu").app
 
 import carb
 import mujoco
@@ -175,12 +181,12 @@ def filter_self_collisions(bodies, stage):
             api.CreateFilteredPairsRel().SetTargets(targets)
 
 
-def run(out):
+def run(out, joy=None):
     out.mkdir(parents=True)
     start_clock = time.monotonic()
     switches = {}
     trials = []
-    for i, (label, command) in enumerate(PASSES):
+    for i, (label, command) in enumerate(PASSES if joy is None else ()):
         start = 3 + i * TRIAL_SECONDS
         stop = start + MOVE_SECONDS
         switches[round(start / dt)] = command
@@ -197,11 +203,13 @@ def run(out):
         switches = {round(trial[key] / dt): command
                     for trial in trials
                     for key, command in (("start_s", tuple(trial["command"])), ("zero_s", ZERO))}
-    duration = args.seconds if args.seconds is not None else (trials[-1]["end_s"] if carry else 75.)
-    ticks = round(duration / dt)
+    duration = args.seconds if joy is not None or args.seconds is not None else (trials[-1]["end_s"] if carry else 75.)
+    ticks = None if duration is None else round(duration / dt)
     options = json.loads((args.options or Path("realtime/omni_calibration.json")).read_text())
     planner = carry.planner if carry else OmniPreview(json.loads(CALIBRATION.read_text()), options)
-    ctl, witness = initialize(planner, out, ticks)
+    ctl, witness = initialize(planner, out, 400 if ticks is None else ticks)
+    if ticks is None:
+        from realtime.viewer_common import grow_reference
     ctl.reference["root_R"] = ctl.reference["root_R"].copy()
     assert not ctl.root_feedback
     m, d = witness.model, witness.data
@@ -279,6 +287,10 @@ def run(out):
     print("V7_USD_READY", flush=True)
     sim.reset()
     print("V7_PHYSX_READY", flush=True)
+    if args.viewer:
+        light = sim_utils.DomeLightCfg(intensity=950., color=(.9, .94, 1.))
+        light.func("/World/ViewportLight", light)
+        sim.set_camera_view((3.9, -4.4, 2.6), (0.8, 0., .8))
     joint_ids, mapped = bot.find_joints(NAMES, preserve_order=True)
     if mapped != NAMES or len(bot.joint_names) != 29:
         raise RuntimeError(f"Joint name mismatch: {mapped}, {bot.joint_names}")
@@ -301,8 +313,36 @@ def run(out):
     write_json(out / "model_audit.json", audit)
     rows, distances, poses, req, plan, stages, commands = [], [], [], [], [], [], []
     reason = ""
-    for frame in range(ticks + 1):
-        if frame in switches:
+    if args.viewer:
+        sim.render()
+        print("V7_VIEWER_RUNNING", flush=True)
+    stop_requested = False
+    if joy is not None:
+        def request_stop(*_):
+            nonlocal stop_requested
+            stop_requested = True
+
+        signal.signal(signal.SIGINT, request_stop)
+        signal.signal(signal.SIGTERM, request_stop)
+    wall_clock = time.monotonic()
+    if joy is not None:
+        print("V7_JOY_READY", flush=True)
+    frames = count() if ticks is None else range(ticks + 1)
+    for frame in frames:
+        if stop_requested or (args.viewer and not app.is_running()):
+            break
+        if args.viewer or joy is not None:
+            time.sleep(max(0., wall_clock + frame * dt - time.monotonic()))
+        if args.viewer and (frame % 2 == 0 or frame == ticks):
+            sim.render()
+        if ticks is None and frame + 2 >= ctl.frames:
+            grow_reference(ctl)
+        if joy is not None:
+            command = joy.command()
+            if command != planner.intent:
+                planner.command(frame, command)
+                print("V7_JOY_COMMAND", round(frame * dt, 2), command, flush=True)
+        elif frame in switches:
             planner.command(frame, switches[frame])
         cmd = planner.phase(frame)
         goal = planner.goal(frame)
@@ -377,6 +417,8 @@ def run(out):
             if carry:
                 carry.after_step(PHYSICS_DT)
 
+    if not poses:
+        return
     audit["max_foot_position_fk_disagreement_m"] = fk_max
     write_json(out / "model_audit.json", audit)
     assert ctl.frame == len(commands)
@@ -389,7 +431,7 @@ def run(out):
     np.savez_compressed(out / "commands.npz", requested=req, planned=plan, stage=stages,
                         reference_root=np.array(planner.positions[:len(poses)])-planner.offset,
                         ref_yaw=planner.angles[:len(poses)])
-    meta = dict(backend="Isaac Sim 5.1 / CPU PhysX", completed=not reason and len(poses) == ticks + 1,
+    meta = dict(backend="Isaac Sim 5.1 / CPU PhysX", completed=not reason and (ticks is None or len(poses) == ticks + 1),
                 stop_reason=reason, grid=f"50 Hz WBC / {1/PHYSICS_DT:g} Hz physics", wall_seconds=time.monotonic()-start_clock,
                 physics_resets=0, duration_s=float(times[-1]), frames=len(poses),
                 physics_steps=(len(poses)-1)*SUBSTEPS, rub_substeps=contacts.rub_count,
@@ -407,9 +449,21 @@ def run(out):
     print("V7_RESULT", {k: v for k, v in meta.items() if k not in ("blocks", "options", "revisions", "trials")},
           flush=True)
 
+    if args.viewer and app.is_running() and not stop_requested:
+        sim.pause()
+        print("V7_VIEWER_HOLD", flush=True)
+        while app.is_running():
+            sim.render()
+            time.sleep(.04)
+
 
 try:
-    run(args.out)
+    if args.teleop:
+        from ros_sim.joy_pipe import JoyInput
+        with JoyInput() as joy:
+            run(args.out, joy)
+    else:
+        run(args.out)
 except Exception:
     traceback.print_exc()
     sys.stderr.flush()

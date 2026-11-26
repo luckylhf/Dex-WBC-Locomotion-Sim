@@ -1,20 +1,6 @@
-# v7 Isaac Sim 5.1 验证补充
+# Isaac Sim 空手与抱箱仿真
 
-2026-11-17 在 luckylhf 上用 Isaac Lab 2.3.0 与 CPU PhysX 跑了原版 record12 EMA ONNX 和 v7 参考规划。WBC 频率 50 Hz，空手 200 Hz，带载复验 400 Hz。运行入口和评分脚本放在本目录，冻结模型由同包 MJCF 与共享网格现场编译。
-
-## 地面接触修复
-
-原场景使用 100 × 100 × 0.10 m 的实体地板，过大的长厚比会触发足底圆柱接触异常。8 秒对照中，保持 0.10 m 厚度，将水平尺寸缩至 10 × 10 m 或改成原生平面均未复现厘米级穿地。改用另一种 USD 缩放方式表达同尺寸，结果逐帧一致。实际验收入口采用已完整复跑的 **2 m** 厚地板，保持顶面 z=0。复现旧配置可传入 `--ground-thickness 0.10`。[地面几何对照](evidence/ground_geometry_probe/results.json)
-
-同一条 75 秒空手六方向路线中，最大足底下沉由 **98.40 mm** 降至 **3.67 mm**，非足底触地由 892 个子步降为 0。4/6 档通过。后退 −0.30 m/s 实测 −0.272 m/s，左横移停车双踝前后差 2.67 cm。[空手逐档门槛](evidence/r15_thick_ground/gate.json) · [旧地板足底数据](evidence/r13/floor_audit.json) · [修正后足底数据](evidence/r15_thick_ground/floor_audit.json)
-
-## 双腕新增 10 kg
-
-0.65 kg 箱壳，两侧抓持点各有 5 kg 配重。5.00–5.24 s 撤除配重托力。箱体是自由 PhysX 刚体，两处弹簧阻尼抓持接口产生双腕虚拟六维力，供手臂、腰和腿部补偿。箱重真值进入物理加载与离线评分。开始接重后 **1.62 s** 收稳，左踝最远移动 **6.02 mm**，超出 5 mm 限值。静站末秒虚拟腕力估计的箱体总重为 **10.652 kg**。首档指令之后严格估重窗口仅 **28.4%** 有效，有效样本平均绝对误差 **0.013 kg**。
-
-前进四档、左右横移六档、左右转向六档全部执行，202 秒且无中途重置。前进 0.20 m/s 和右横移 0.20 m/s 两档通过全部单档门槛。12 档停车平移或航向漂移超限，6 档并步脚差超限。全程无脚间擦碰、交叉、非足底触地或箱体碰地。前进 0.40 m/s 停车窗内根部净移 44.11 cm，右转 0.30 rad/s 稳走箱体横滚峰峰值 12.69°。[逐档门槛与估重](evidence/carry_r02/summary.json) · [完整评测](evidence/carry_r02/metrics.json) · [生效参数](evidence/carry_r02/run.json)
-
-双视角视频可按文末命令生成。动作与测量来自 Isaac Sim，画面由 MuJoCo 离线渲染。
+运行入口使用 Isaac Sim 5.1 / Isaac Lab 2.3.0 的 CPU PhysX。空手为 200 Hz 物理步进，带载示例为 400 Hz，WBC 均为 50 Hz。地面默认厚 2 m，顶面保持 z=0。带载入口以抓持接口反力估重，配重位于两侧腕端。
 
 ## Linux x86_64 离线安装与运行
 
@@ -39,7 +25,33 @@ bash isaacsim/run.sh --out "$repo/out/isaac-carry" --carry --disable-unmatched-c
 
 首次启动会按工况编译所需的 MuJoCo 模型，再用同包 URDF 和网格生成本次运行的 USD。
 
-评分与离线双视角视频使用主 README 的离线安装步骤生成的 `.venv`。
+要在 Isaac Sim 原生窗口观看，在图形桌面运行以下命令。空手路线按墙钟节拍呈现，结束后窗口停在最后一帧，关窗退出。
+
+```bash
+bash isaacsim/run.sh --viewer --out "$repo/out/isaac-empty-view" --disable-unmatched-colliders --filter-self
+```
+
+## ROS 2 空手遥操作
+
+按 [ROS 2 安装和首次构建](../docs/ROS_MUJOCO_TELEOP.md#安装和首次构建)准备 ROS，在仓库根目录运行。Isaac Sim 与 Teleop 在两个终端使用同一 ROS 域。ROS 传递 Joy 指令，WBC 和 PhysX 分别以 50 Hz 和 200 Hz 运行。
+
+```bash
+export ROS_DOMAIN_ID=148
+bash isaacsim/run.sh --viewer --teleop --out ./out/isaac-teleop --disable-unmatched-colliders --filter-self
+```
+
+```bash
+export ROS_DOMAIN_ID=148
+./ros_sim/run.sh teleop --isaac
+```
+
+开窗静站，按 D → 取消 D → 按 A 后启用三轴控制。前进 0.10–0.40 m/s，后退和横移到 0.30 m/s，转向到 0.45 rad/s，每档 0.05。勾选 C 收步并退出行走使能。勾选 F 归零，取消后恢复当前滑杆指令。Joy 断流 0.30 秒时收步，再起步需要重新按 D → A。关闭 Isaac Sim 窗口可保存记录并退出。可加 `--seconds` 限制运行时长。
+
+[Isaac Sim 遥操作窗口截图](../docs/videos/Isaac-Sim原生窗口.png)
+
+## 评分与视频
+
+评分与双视角视频使用主 README 的离线安装步骤生成的 `.venv`。轨迹由 Isaac Sim 生成，视频由 MuJoCo 渲染。
 
 ```bash
 repo="$PWD"
@@ -51,3 +63,4 @@ bash "$repo/isaacsim/render.sh" "$repo/out/isaac-empty"
 bash "$repo/isaacsim/render_carry.sh" "$repo/out/isaac-carry"
 ```
 
+[验证结果与已知限制](../docs/ACCEPTANCE.md#isaac-sim-核心结果)

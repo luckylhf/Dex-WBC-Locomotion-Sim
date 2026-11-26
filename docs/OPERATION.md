@@ -30,7 +30,7 @@ source env.sh
 # 发送 0 可触发停车
 ```
 
-带载的命令入口为预设的验收序列。
+三轴空手遥操作见 [ROS 2 遥操作](ROS_MUJOCO_TELEOP.md)。空手和抱箱也可用 [原生 MuJoCo 窗口](../realtime/README.md#可交互-viewer) 本机操作。预设抱箱入口运行固定指令序列。
 
 ## 输出和排查
 
